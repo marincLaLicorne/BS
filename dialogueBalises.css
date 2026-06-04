@@ -1,0 +1,49 @@
+/* ===== BALISES DE DIALOGUES ============================================ */
+
+/* --- 1.1 VARIABLES ------------------------------ */
+/* --- @doc https://developer.mozilla.org/... ----- */
+
+:root {
+
+	/* ··· THEME CLAIR ··· */
+	&[data-color-scheme="light"] {
+		color-scheme: light;
+		--sigrid : #929e3d; 
+		--elio : #d8ac6b;
+		--soko : #40A497;
+		--sim : #ad3225;
+		--ima : #cc6633;
+		--anto : #009999; 
+		--ceci : #cc0099;
+		--sas : #9999ff;
+		--rav : #3399cc; 
+		--kus : #ac374d;
+	}
+
+	/* ··· THEME SOMBRE ··· */
+	&[data-color-scheme="dark"] {
+		color-scheme: dark;
+		--sigrid : #929e3d;
+		--elio : #d8ac6b;
+		--soko : #40A497;
+		--sim : #ad3225;
+		--ima : #cc6633;
+		--anto : #009999; 
+		--ceci : #cc0099;
+		--sas : #9999ff;
+		--rav : #3399cc; 
+		--kus : #ac374d;
+	}
+}
+
+/* --- 1.2 BALISES ------------------------------ */
+elio { color: var(--elio); }
+sigrid { color: var(--sigrid); }
+soko { color: var(--soko); }
+sim { color: var(--sim); }
+ima { color: var(--ima); }
+anto { color: var(--anto); }
+ceci { color: var(--ceci); }
+sas { color: var(--sas); }
+rav { color: var(--rav); }
+kus { color: var(--kus); }
