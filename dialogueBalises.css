@@ -18,6 +18,8 @@
 		--sas : #9999ff;
 		--rav : #3399cc; 
 		--kus : #ac374d;
+		--gasp : #5193A8;
+		--noor : #61965D;
 	}
 
 	/* ··· THEME SOMBRE ··· */
@@ -33,6 +35,8 @@
 		--sas : #9999ff;
 		--rav : #3399cc; 
 		--kus : #ac374d;
+		--gasp : #5193A8;
+		--noor : #61965D;
 	}
 }
 
@@ -47,3 +51,5 @@ ceci { color: var(--ceci); }
 sas { color: var(--sas); }
 rav { color: var(--rav); }
 kus { color: var(--kus); }
+gasp { color: var(--gasp); }
+noor { color: var(--noor); }
