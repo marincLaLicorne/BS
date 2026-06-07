@@ -20,6 +20,8 @@
 		--kus : #ac374d;
 		--gasp : #5193A8;
 		--noor : #61965D;
+		--milo : #4b76a3;
+		--bo : #c25b24;
 	}
 
 	/* ··· THEME SOMBRE ··· */
@@ -37,6 +39,8 @@
 		--kus : #ac374d;
 		--gasp : #5193A8;
 		--noor : #61965D;
+		--milo : #5c9baa;
+		--bo : #c25b24;
 	}
 }
 
@@ -53,3 +57,5 @@ rav { color: var(--rav); }
 kus { color: var(--kus); }
 gasp { color: var(--gasp); }
 noor { color: var(--noor); }
+milo { color: var(--milo); }
+bo { color: var(--bo); }
