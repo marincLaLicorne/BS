@@ -22,6 +22,7 @@
 		--noor : #61965D;
 		--milo : #4b76a3;
 		--bo : #c25b24;
+		--blaiz : #4b7d7d;
 	}
 
 	/* ··· THEME SOMBRE ··· */
@@ -41,6 +42,7 @@
 		--noor : #61965D;
 		--milo : #5c9baa;
 		--bo : #c25b24;
+		--blaiz : #4b7d7d;
 	}
 }
 
@@ -59,3 +61,4 @@ gasp { color: var(--gasp); }
 noor { color: var(--noor); }
 milo { color: var(--milo); }
 bo { color: var(--bo); }
+blaiz { color: var(--blaiz); }
