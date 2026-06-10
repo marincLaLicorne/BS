@@ -8,57 +8,62 @@
 	/* ··· THEME CLAIR ··· */
 	&[data-color-scheme="light"] {
 		color-scheme: light;
-		--sigrid : #929e3d; 
-		--elio : #d8ac6b;
-		--soko : #40A497;
-		--sim : #ad3225;
-		--ima : #cc6633;
 		--anto : #009999; 
-		--ceci : #cc0099;
-		--sas : #9999ff;
-		--rav : #3399cc; 
-		--kus : #ac374d;
-		--gasp : #5193A8;
-		--noor : #61965D;
-		--milo : #4b76a3;
-		--bo : #c25b24;
 		--blaiz : #4b7d7d;
+		--bo : #c25b24;
+		--ceci : #cc0099;
+		--elio : #d8ac6b;
+		--gasp : #5193A8;
+		--ima : #cc6633;
+		--kus : #ac374d;
+		--milo : #4b76a3;
+		--noor : #61965D;
+		--nora : #a3758e;
+		--rav : #3399cc;
+		--sas : #9999ff;
+		--sigrid : #929e3d;
+		--sim : #ad3225;
+		--soko : #40A497;		
 	}
 
 	/* ··· THEME SOMBRE ··· */
 	&[data-color-scheme="dark"] {
 		color-scheme: dark;
-		--sigrid : #929e3d;
-		--elio : #d8ac6b;
-		--soko : #40A497;
-		--sim : #ad3225;
-		--ima : #cc6633;
 		--anto : #009999; 
-		--ceci : #cc0099;
-		--sas : #9999ff;
-		--rav : #3399cc; 
-		--kus : #ac374d;
-		--gasp : #5193A8;
-		--noor : #61965D;
-		--milo : #5c9baa;
-		--bo : #c25b24;
 		--blaiz : #4b7d7d;
+		--bo : #c25b24;
+		--ceci : #cc0099;
+		--elio : #d8ac6b;
+		--gasp : #5193A8;
+		--ima : #cc6633;
+		--kus : #ac374d;
+		--milo : #5c9baa;
+		--noor : #61965D;
+		--nora : #56739A;
+		--rav : #3399cc; 
+		--sas : #9999ff;
+		--sigrid : #929e3d;
+		--sim : #ad3225;
+		--soko : #40A497;
 	}
 }
 
 /* --- 1.2 BALISES ------------------------------ */
-elio { color: var(--elio); }
-sigrid { color: var(--sigrid); }
-soko { color: var(--soko); }
-sim { color: var(--sim); }
-ima { color: var(--ima); }
 anto { color: var(--anto); }
-ceci { color: var(--ceci); }
-sas { color: var(--sas); }
-rav { color: var(--rav); }
-kus { color: var(--kus); }
-gasp { color: var(--gasp); }
-noor { color: var(--noor); }
-milo { color: var(--milo); }
-bo { color: var(--bo); }
 blaiz { color: var(--blaiz); }
+bo { color: var(--bo); }
+ceci { color: var(--ceci); }
+elio { color: var(--elio); }
+gasp { color: var(--gasp); }
+ima { color: var(--ima); }
+kus { color: var(--kus); }
+milo { color: var(--milo); }
+noor { color: var(--noor); }
+nora { color: var(--nora); }
+rav { color: var(--rav); }
+sas { color: var(--sas); }
+sigrid { color: var(--sigrid); }
+sim { color: var(--sim); }
+soko { color: var(--soko); }
+
+
