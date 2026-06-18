@@ -23,7 +23,8 @@
 		--sas : #9999ff;
 		--sigrid : #929e3d;
 		--sim : #ad3225;
-		--soko : #40A497;		
+		--soko : #40A497;	
+		--syn : #cc6600;
 	}
 
 	/* ··· THEME SOMBRE ··· */
@@ -45,6 +46,7 @@
 		--sigrid : #929e3d;
 		--sim : #ad3225;
 		--soko : #40A497;
+		--syn : #cc6600;
 	}
 }
 
@@ -65,5 +67,5 @@ sas { color: var(--sas); }
 sigrid { color: var(--sigrid); }
 sim { color: var(--sim); }
 soko { color: var(--soko); }
-
+syn { color: var(--syn); }
 
