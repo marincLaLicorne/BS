@@ -1371,12 +1371,12 @@ smsc {
 	}
 }
 
-smsa img:not([src^="/users/"]), smsb img:not([src^="/users/"]), smsc img:not([src^="/users/"]){
+smsa img:not([src*="/smiles/"]), smsb img:not([src*="/smiles/"]), smsc img:not([src*="/smiles/"]){
 	max-width: 300px;
 	margin: -3px;
 }
 
-smsa:has(img:not([src^="/users/"])), smsb:has(img:not([src^="/users/"])), smsc:has(img:not([src^="/users/"])) {
+smsa:has(img:not([src*="/smiles/"])), smsb:has(img:not([src*="/smiles/"])), smsc:has(img:not([src*="/smiles/"])) {
   padding: 0;
   overflow: hidden;
 
