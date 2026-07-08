@@ -14,11 +14,14 @@
 		--ceci : #cc0099;
 		--elio : #d8ac6b;
 		--gasp : #5193A8;
+		--gas : #0099ff;
 		--ima : #cc6633;
 		--kus : #ac374d;
+		--max : #984954;
 		--milo : #4b76a3;
 		--noor : #61965D;
 		--nora : #a3758e;
+		--rae : #006666;
 		--rav : #3399cc;
 		--sas : #9999ff;
 		--sigrid : #929e3d;
@@ -36,11 +39,14 @@
 		--ceci : #cc0099;
 		--elio : #d8ac6b;
 		--gasp : #5193A8;
+		--gas : #0099ff;
 		--ima : #cc6633;
 		--kus : #ac374d;
+		--max : #984954;
 		--milo : #5c9baa;
 		--noor : #61965D;
 		--nora : #56739A;
+		--rae : #006666;
 		--rav : #3399cc; 
 		--sas : #9999ff;
 		--sigrid : #929e3d;
@@ -57,11 +63,14 @@ bo { color: var(--bo); }
 ceci { color: var(--ceci); }
 elio { color: var(--elio); }
 gasp { color: var(--gasp); }
+gas { color: var(--gas); }
 ima { color: var(--ima); }
 kus { color: var(--kus); }
+max { color: var(--max); }
 milo { color: var(--milo); }
 noor { color: var(--noor); }
 nora { color: var(--nora); }
+rae { color: var(--rae); }
 rav { color: var(--rav); }
 sas { color: var(--sas); }
 sigrid { color: var(--sigrid); }
