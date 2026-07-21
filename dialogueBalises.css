@@ -12,10 +12,12 @@
 		--blaiz : #4b7d7d;
 		--bo : #c25b24;
 		--ceci : #cc0099;
+		--eff : #df663b;
 		--elio : #d8ac6b;
 		--gasp : #5193A8;
-		--gas : #0099ff;
+		--gid : #0099ff;
 		--ima : #cc6633;
+		--jim : #707ece;
 		--kus : #ac374d;
 		--max : #984954;
 		--milo : #4b76a3;
@@ -28,6 +30,7 @@
 		--sim : #ad3225;
 		--soko : #40A497;	
 		--syn : #cc6600;
+		--vk : #c32954;
 	}
 
 	/* ··· THEME SOMBRE ··· */
@@ -37,10 +40,12 @@
 		--blaiz : #4b7d7d;
 		--bo : #c25b24;
 		--ceci : #cc0099;
+		--eff : #df663b;
 		--elio : #d8ac6b;
 		--gasp : #5193A8;
-		--gas : #0099ff;
+		--gid : #0099ff;
 		--ima : #cc6633;
+		--jim : #707ece;
 		--kus : #ac374d;
 		--max : #984954;
 		--milo : #5c9baa;
@@ -53,6 +58,7 @@
 		--sim : #ad3225;
 		--soko : #40A497;
 		--syn : #cc6600;
+		--vk : #c32954;
 	}
 }
 
@@ -61,10 +67,12 @@ anto { color: var(--anto); }
 blaiz { color: var(--blaiz); }
 bo { color: var(--bo); }
 ceci { color: var(--ceci); }
+eff { color: var(--eff); }
 elio { color: var(--elio); }
 gasp { color: var(--gasp); }
-gas { color: var(--gas); }
+gid { color: var(--gid); }
 ima { color: var(--ima); }
+jim { color: var(--jim); }
 kus { color: var(--kus); }
 max { color: var(--max); }
 milo { color: var(--milo); }
@@ -77,4 +85,5 @@ sigrid { color: var(--sigrid); }
 sim { color: var(--sim); }
 soko { color: var(--soko); }
 syn { color: var(--syn); }
+vk { color: var(--vk); }
 
