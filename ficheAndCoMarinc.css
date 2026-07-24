@@ -350,7 +350,7 @@
 	&.spectres { background:var(--spectres);}
 
 	&.normies { background:var(--normies);}
-	&.calices { background:var(--calices);}
+	&.spicy { background:var(--spicy);}
 	&.chasseurs { background:var(--chasseurs);}
 
 }
@@ -419,7 +419,7 @@
 		&.spectres { color:var(--spectres);}
 
 		&.normies { color:var(--normies);}
-		&.calices { color:var(--calices);}
+		&.spicy { color:var(--spicy);}
 		&.chasseurs { color:var(--chasseurs);}
 	}
 
@@ -863,7 +863,7 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 			&.spectres { background:var(--spectres); color: var(--neutral);}
 
 			&.normies { background:var(--normies); color: var(--neutral);}
-			&.calices { background:var(--calices); color: var(--neutral);}
+			&.spicy { background:var(--spicy); color: var(--neutral);}
 			&.chasseurs { background:var(--chasseurs); color: var(--neutral);}
 	}
 
@@ -949,7 +949,7 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 		&.spectres { color:var(--spectres);}
 
 		&.normies { color:var(--normies);}
-		&.calices { color:var(--calices);}
+		&.spicy { color:var(--spicy);}
 		&.chasseurs { color:var(--chasseurs);}
 }
 
