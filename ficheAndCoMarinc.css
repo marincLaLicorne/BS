@@ -1468,6 +1468,7 @@ dots {
   animation: dot-flashing 1s infinite linear alternate;
   animation-delay: 0.5s;
   display: inline-block;
+  margin: 0 15px;
 }
 
 smsa dots, smsb dots, smsc dots {
