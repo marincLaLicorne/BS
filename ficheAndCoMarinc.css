@@ -1442,6 +1442,10 @@ smsa, smsb, smsc {
 	  right: 13px;
 	}
 
+	&.like[emoji]::after{
+  		content: attr(emoji);
+	}
+
 }
 
 /*!
