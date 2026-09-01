@@ -1523,7 +1523,26 @@ dots::after {
 
 /*# sourceMappingURL=three-dots.css.map */
 
+/* ===== 13. TRADUCTION ============================================ */
+txt { 
+	border-bottom: 1px dotted var(--neutralLight); 
+	pointer:cursor;
+}
+txt, txt:hover:before {
+	display: inline; 
+}
+txt:hover og, txt:before {
+	display: none; 
+}
+txt:before {
+	content: attr(trad); 
+}
 
+time {
+	font-family: courier new; 
+	font-size:11px; 
+	font-style: italic;
+} 
 
 /* DEBUG -- Avatar dans le champs de profil*/
 .profil_editavatar dl:first-child {
