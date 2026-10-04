@@ -12,6 +12,7 @@
 		--blaiz : #4b7d7d;
 		--bo : #c25b24;
 		--ceci : #cc0099;
+		--eo : #FB974E;
 		--eff : #df663b;
 		--elio : #d8ac6b;
 		--gasp : #5193A8;
@@ -28,6 +29,7 @@
 		--sas : #9999ff;
 		--sigrid : #929e3d;
 		--sim : #ad3225;
+		--sixtd : #F4C430;
 		--soko : #40A497;	
 		--syn : #cc6600;
 		--vk : #c32954;
@@ -40,6 +42,7 @@
 		--blaiz : #4b7d7d;
 		--bo : #c25b24;
 		--ceci : #cc0099;
+		--eo : #FB974E;
 		--eff : #df663b;
 		--elio : #d8ac6b;
 		--gasp : #5193A8;
@@ -56,6 +59,7 @@
 		--sas : #9999ff;
 		--sigrid : #929e3d;
 		--sim : #ad3225;
+		--sixtd : #F4C430;
 		--soko : #40A497;
 		--syn : #cc6600;
 		--vk : #c32954;
@@ -67,6 +71,7 @@ anto { color: var(--anto); }
 blaiz { color: var(--blaiz); }
 bo { color: var(--bo); }
 ceci { color: var(--ceci); }
+eo { color: var(--eo); }
 eff { color: var(--eff); }
 elio { color: var(--elio); }
 gasp { color: var(--gasp); }
@@ -83,6 +88,7 @@ rav { color: var(--rav); }
 sas { color: var(--sas); }
 sigrid { color: var(--sigrid); }
 sim { color: var(--sim); }
+sixtd { color: var(--sixtd); }
 soko { color: var(--soko); }
 syn { color: var(--syn); }
 vk { color: var(--vk); }
