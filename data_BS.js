@@ -4,7 +4,26 @@ const geojson  = {
 			{
 				'type': 'Feature',
 				'properties': {
-					'titre': 'Appt. de Sim',
+					'titre': 'App. de Sandy',
+					'quartier': 'Autre',
+					'quartierClass' : 'autre',
+					'address' : '1180 Lansdowne Dr',
+					'icon': 'residential',
+					'nameType' : 'Résidentiel',
+					'forumLink' : '/f19-01-la-banlieue' ,
+					'livingHere' : [['Wren Sanderson', '/u62', 'https://i.postimg.cc/1z9fK7mY/tumblr-pix2nsi-DYH1x2tyt7o9-400.jpg', 'Locataire'], ]
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-122.810581858099, 49.28296137780823598],
+				}
+			},
+
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'App. de Sim',
 					'quartier': 'Fairview',
 					'quartierClass' : 'fairview',
 					'address' : '766 willow St',
