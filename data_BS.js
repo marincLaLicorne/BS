@@ -91,6 +91,44 @@ const geojson  = {
 					'coordinates': [-123.06915190575916, 49.28154446429158],
 				}
 			},
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'The Sinister',
+					'quartier': 'Grandview & Woodland',
+					'quartierClass' : 'grandview',
+					'address' : '1707 Franklin St',
+					'icon': 'art',
+					'nameType' : 'Art & Culture',
+					'forumLink' : '' ,
+					'livingHere' : [['Miel Garrido', '/u35', 'https://i.pinimg.com/736x/c8/03/81/c803817f8cc899410e8d963eb24e5566.jpg', 'Propriétaire'], ]
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.07014704462655, 49.28230300620726],
+				}
+			},
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'Vancouver Film Studios',
+					'quartier': 'Renfrew & Collingwood',
+					'quartierClass' : 'renfrew',
+					'address' : '3500 Cornett Rd',
+					'icon': 'art',
+					'nameType' : 'Art & Culture',
+					'forumLink' : '' ,
+					'livingHere' : [['Miel Garrido', '/u35', 'https://i.pinimg.com/736x/c8/03/81/c803817f8cc899410e8d963eb24e5566.jpg', 'Décoratrice'], ]
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.02803424081864, 49.26226191778025],
+				}
+			},
+				
+				
 			
 			/* -------------------- AJOUT AVANT ICI ------------------------- */  
 
