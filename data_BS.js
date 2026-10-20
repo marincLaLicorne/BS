@@ -60,6 +60,42 @@ const geojson  = {
 			{
 				'type': 'Feature',
 				'properties': {
+					'titre': 'Chalet d\'Alejandro',
+					'quartier': 'North Vancouver',
+					'quartierClass' : 'north',
+					'address' : '',
+					'icon': 'residential',
+					'nameType' : 'Résidentiel',
+					'forumLink' : '' ,
+					'livingHere' : [['Alejandro Cowie', '/u2', 'https://www.aht.li/3958593/aleicon.png', 'Propriétaire'], ]
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.220500, 49.455694],
+				}
+			},
+				
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'Maison d\'Alejandro',
+					'quartier': 'North Vancouver',
+					'quartierClass' : 'north',
+					'address' : '',
+					'icon': 'residential',
+					'nameType' : 'Résidentiel',
+					'forumLink' : '' ,
+					'livingHere' : [['Alejandro Cowie', '/u2', 'https://www.aht.li/3958593/aleicon.png', 'Propriétaire'], ]
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.204063, 49.249086],
+				}
+			},
+				
+			{
+				'type': 'Feature',
+				'properties': {
 					'titre': 'Maison du nid des plantes',
 					'quartier': 'Arbutus Ridge',
 					'quartierClass' : 'arbutus',
@@ -77,23 +113,6 @@ const geojson  = {
 				}
 			},
 				
-			{
-				'type': 'Feature',
-				'properties': {
-					'titre': 'Pink Bear',
-					'quartier': 'Kitsilano',
-					'quartierClass' : 'kitsilano',
-					'address' : '',
-					'icon': 'eating',
-					'nameType' : 'Gastronomie',
-					'forumLink' : '' ,
-					'livingHere' : [],
-				},
-				'geometry': {
-					'type': 'Point',
-					'coordinates': [-123.15191, 49.2767],
-				}
-			},
 			{
 				'type': 'Feature',
 				'properties': {
@@ -129,6 +148,27 @@ const geojson  = {
 					'coordinates': [-123.06915190575916, 49.28154446429158],
 				}
 			},
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'The Pink Bear',
+					'quartier': 'Kitsilano',
+					'quartierClass' : 'kitsilano',
+					'address' : '',
+					'icon': 'eating',
+					'nameType' : 'Gastronomie',
+					'forumLink' : '' ,
+					'livingHere' : [['Alejandro Cowie', '/u2', 'https://www.aht.li/3958593/aleicon.png', 'Propriétaire'],
+													['Nicky Valentine', '/u28', 'https://64.media.tumblr.com/7747c40e036265e8bf37730959385eee/c1aac183a9f0ef1a-e4/s400x600/68fc1a098afa2ec0339c459cf6822e8d5e17fccf.pnj', 'Gérant'], 
+													['Rae Pritchard', '/u40', 'none', 'Serveuse'],]
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.151867, 49.276467],
+				}
+			},
+				
 
 			{
 				'type': 'Feature',
