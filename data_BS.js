@@ -12,11 +12,54 @@ const geojson  = {
 					'icon': 'sports',
 					'nameType' : 'Sports & Loisirs',
 					'forumLink' : '/f19-01-la-banlieue' ,
-					'livingHere' : [['Wren Sanderson', '/u62', 'https://i.postimg.cc/1z9fK7mY/tumblr-pix2nsi-DYH1x2tyt7o9-400.jpg', 'Instructeur de tir'], ]
+					'livingHere' : [['Wren Sanderson', '/u62', 'https://i.postimg.cc/1z9fK7mY/tumblr-pix2nsi-DYH1x2tyt7o9-400.jpg', 'Instructeur de tir'], ],
+					'descr' : '',
+					'tags' : [],
 				},
 				'geometry': {
 					'type': 'Point',
 					'coordinates': [-122.65625387330775, 49.281457607142826],
+				}
+			},
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'App. de Keira',
+					'quartier': 'Hastings & Sunrise',
+					'quartierClass' : 'hastings',
+					'address' : '',
+					'icon': 'residential',
+					'nameType' : 'Résidentiel',
+					'forumLink' : '' ,
+					'livingHere' : [['Keira', '/u32', 'https://www.aht.li/3975273/keira3.png', 'Locataire'], ],
+					'descr' : '',
+					'tags' : [],
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.059133, 49.262445],
+				}
+			},
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'App. de Mira et Max',
+					'quartier': 'West Point Grey',
+					'quartierClass' : 'westpoint',
+					'address' : '',
+					'icon': 'residential',
+					'nameType' : 'Résidentiel',
+					'forumLink' : '' ,
+					'livingHere' : [['Mira Kutsenko', '/u47', 'https://www.aht.li/3977834/mira1.png', 'Colocataire'], 
+													['Max Morgan', '/u46', 'https://www.aht.li/3993659/max.png', 'Colocataire'], ],
+					'descr' : '',
+					'tags' : [],
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.211064, 49.263684],
 				}
 			},
 				
@@ -30,7 +73,9 @@ const geojson  = {
 					'icon': 'residential',
 					'nameType' : 'Résidentiel',
 					'forumLink' : '/f19-01-la-banlieue' ,
-					'livingHere' : [['Wren Sanderson', '/u62', 'https://i.postimg.cc/1z9fK7mY/tumblr-pix2nsi-DYH1x2tyt7o9-400.jpg', 'Locataire'], ]
+					'livingHere' : [['Wren Sanderson', '/u62', 'https://i.postimg.cc/1z9fK7mY/tumblr-pix2nsi-DYH1x2tyt7o9-400.jpg', 'Locataire'], ],
+					'descr' : '',
+					'tags' : [],
 				},
 				'geometry': {
 					'type': 'Point',
@@ -49,7 +94,9 @@ const geojson  = {
 					'icon': 'residential',
 					'nameType' : 'Résidentiel',
 					'forumLink' : '/f15-01-quartiers-nord' ,
-					'livingHere' : [['Sim Martell', '/u25', 'https://64.media.tumblr.com/15eea2c1ae5e82d93ffb87c2f02318b2/bff136aaa5183769-d9/s1280x1920/8da99dc4f50e8820e7fdf6b0d446304399b753f9.jpg', 'Locataire'], ]
+					'livingHere' : [['Sim Martell', '/u25', 'https://64.media.tumblr.com/15eea2c1ae5e82d93ffb87c2f02318b2/bff136aaa5183769-d9/s1280x1920/8da99dc4f50e8820e7fdf6b0d446304399b753f9.jpg', 'Locataire'], ],
+					'descr' : '',
+					'tags' : [],
 				},
 				'geometry': {
 					'type': 'Point',
@@ -67,25 +114,50 @@ const geojson  = {
 					'icon': 'residential',
 					'nameType' : 'Résidentiel',
 					'forumLink' : '' ,
-					'livingHere' : [['Alejandro Cowie', '/u2', 'https://www.aht.li/3958593/aleicon.png', 'Propriétaire'], ]
+					'livingHere' : [['Alejandro Cowie', '/u2', 'https://www.aht.li/3958593/aleicon.png', 'Propriétaire'], ],
+					'descr' : '',
+					'tags' : [],
 				},
 				'geometry': {
 					'type': 'Point',
 					'coordinates': [-123.220500, 49.455694],
 				}
 			},
-				
+			
 			{
 				'type': 'Feature',
 				'properties': {
-					'titre': 'Maison d\'Alejandro',
-					'quartier': 'North Vancouver',
-					'quartierClass' : 'north',
+					'titre': 'Cottage d\'Akira',
+					'quartier': 'Shauhgnessy',
+					'quartierClass' : 'shauhgnessy',
 					'address' : '',
 					'icon': 'residential',
 					'nameType' : 'Résidentiel',
 					'forumLink' : '' ,
-					'livingHere' : [['Alejandro Cowie', '/u2', 'https://www.aht.li/3958593/aleicon.png', 'Propriétaire'], ]
+					'livingHere' : [['Akira', '/u31', 'https://sd-g1.archive-host.com/membres/images/b2229e73b4bd30522950464fe69182f517cfd27f/BonesSickles/akari2.png', 'Propriétaire'], ],
+					'descr' : '',
+					'tags' : [],
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.141500, 49.252556],
+				}
+			},
+				
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'Maison d\'Alejandro',
+					'quartier': 'Dunbar Southlands',
+					'quartierClass' : 'dunbar',
+					'address' : '',
+					'icon': 'residential',
+					'nameType' : 'Résidentiel',
+					'forumLink' : '' ,
+					'livingHere' : [['Alejandro Cowie', '/u2', 'https://www.aht.li/3958593/aleicon.png', 'Propriétaire'], ],
+					'descr' : '',
+					'tags' : [],
 				},
 				'geometry': {
 					'type': 'Point',
@@ -105,7 +177,9 @@ const geojson  = {
 					'forumLink' : '/f18-04-quartiers-sud' ,
 					'livingHere' : [['Sigrid Grahn-Thomson', '/u3', 'https://64.media.tumblr.com/8fd031389a38677f988d5c0b5e77bee1/3298f8cb9bd21db7-81/s400x600/783c8029900e0d8ed34320354a201a3cdea50917.pnj', 'Colocataire'], 
 									['Cecily Grahn-Thomson', '/u4', 'https://64.media.tumblr.com/9385748ee53d197a73e6a37d02d5df42/af8ae5cdf08d3219-9e/s1280x1920/31dd9db44a3f5cc5109b9955c45f289286b67d4b.jpg', 'Propriétaire'],
-									['Nicky Valentine', '/u28', 'https://64.media.tumblr.com/7747c40e036265e8bf37730959385eee/c1aac183a9f0ef1a-e4/s400x600/68fc1a098afa2ec0339c459cf6822e8d5e17fccf.pnj', 'Colocataire'], ]
+									['Nicky Valentine', '/u28', 'https://64.media.tumblr.com/7747c40e036265e8bf37730959385eee/c1aac183a9f0ef1a-e4/s400x600/68fc1a098afa2ec0339c459cf6822e8d5e17fccf.pnj', 'Colocataire'], ],
+					'descr' : '',
+					'tags' : [],
 				},
 				'geometry': {
 					'type': 'Point',
@@ -123,13 +197,38 @@ const geojson  = {
 					'icon': 'residential',
 					'nameType' : 'Résidentiel',
 					'forumLink' : '' ,
-					'livingHere' : [['Markus Ashmore', '/u7', 'https://i.pinimg.com/1200x/b7/71/c0/b771c0ec871b9d404051dc7cc6b7526c.jpg', 'Propriétaire'], ]
+					'livingHere' : [['Markus Ashmore', '/u7', 'https://i.pinimg.com/1200x/b7/71/c0/b771c0ec871b9d404051dc7cc6b7526c.jpg', 'Propriétaire'], ],
+					'descr' : '',
+					'tags' : [],
 				},
 				'geometry': {
 					'type': 'Point',
 					'coordinates': [-122.870414, 49.302309],
 				}
 			},
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'Maison de Liv',
+					'quartier': 'Stanley Park',
+					'quartierClass' : 'stanley',
+					'address' : '',
+					'icon': 'residential',
+					'nameType' : 'Résidentiel',
+					'forumLink' : '' ,
+					'livingHere' : [['Lavinia Taylor', '/u18', 'https://www.aht.li/3973103/Livicon1.png', 'Propriétaire'], 
+													['Sixtine Talbott', '/u60', 'https://www.aht.li/3993657/sixd.png', 'Colocataire'], 
+													['zixuan pavlova', '/u50', 'https://www.aht.li/3993658/xiuan.png', 'Colocataire'], ],
+					'descr' : '',
+					'tags' : [],
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.130474, 49.298815],
+				}
+			},
+				
 
 			{
 				'type': 'Feature',
@@ -141,7 +240,10 @@ const geojson  = {
 					'icon': 'sports',
 					'nameType' : 'Sports & Loisirs',
 					'forumLink' : '' ,
-					'livingHere' : [['Markus Ashmore', '/u7', 'https://i.pinimg.com/1200x/b7/71/c0/b771c0ec871b9d404051dc7cc6b7526c.jpg', 'Propriétaire'], ['Max Morgan', '/u46', 'https://i.postimg.cc/tRnsqxY1/Screenshot-20261020-153858-Instagram.jpg', 'Professeur de Yoga'], ]
+					'livingHere' : [['Markus Ashmore', '/u7', 'https://i.pinimg.com/1200x/b7/71/c0/b771c0ec871b9d404051dc7cc6b7526c.jpg', 'Propriétaire'], 
+													['Max Morgan', '/u46', 'https://i.postimg.cc/tRnsqxY1/Screenshot-20261020-153858-Instagram.jpg', 'Professeur de Yoga'], ],
+					'descr' : '',
+					'tags' : [],
 				},
 				'geometry': {
 					'type': 'Point',
@@ -161,7 +263,9 @@ const geojson  = {
 					'forumLink' : '' ,
 					'livingHere' : [['Alejandro Cowie', '/u2', 'https://www.aht.li/3958593/aleicon.png', 'Propriétaire'],
 													['Nicky Valentine', '/u28', 'https://64.media.tumblr.com/7747c40e036265e8bf37730959385eee/c1aac183a9f0ef1a-e4/s400x600/68fc1a098afa2ec0339c459cf6822e8d5e17fccf.pnj', 'Gérant'], 
-													['Rae Pritchard', '/u40', 'none', 'Serveuse'],]
+													['Rae Pritchard', '/u40', 'none', 'Serveuse'],],
+					'descr' : 'Bar sportif',
+					'tags' : [],
 				},
 				'geometry': {
 					'type': 'Point',
@@ -180,7 +284,9 @@ const geojson  = {
 					'icon': 'art',
 					'nameType' : 'Art & Culture',
 					'forumLink' : '' ,
-					'livingHere' : [['Miel Garrido', '/u35', 'https://i.pinimg.com/736x/c8/03/81/c803817f8cc899410e8d963eb24e5566.jpg', 'Propriétaire'], ]
+					'livingHere' : [['Miel Garrido', '/u35', 'https://i.pinimg.com/736x/c8/03/81/c803817f8cc899410e8d963eb24e5566.jpg', 'Propriétaire'], ],
+					'descr' : 'Nightclub et lieu d\'Art',
+					'tags' : ['LGBT+ Friendly', 'Woman owned'],
 				},
 				'geometry': {
 					'type': 'Point',
@@ -198,7 +304,9 @@ const geojson  = {
 					'icon': 'art',
 					'nameType' : 'Art & Culture',
 					'forumLink' : '' ,
-					'livingHere' : [['Miel Garrido', '/u35', 'https://i.pinimg.com/736x/c8/03/81/c803817f8cc899410e8d963eb24e5566.jpg', 'Décoratrice'], ]
+					'livingHere' : [['Miel Garrido', '/u35', 'https://i.pinimg.com/736x/c8/03/81/c803817f8cc899410e8d963eb24e5566.jpg', 'Décoratrice'], ],
+					'descr' : '',
+					'tags' : [],
 				},
 				'geometry': {
 					'type': 'Point',
