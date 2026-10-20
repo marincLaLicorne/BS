@@ -4,6 +4,24 @@ const geojson  = {
 			{
 				'type': 'Feature',
 				'properties': {
+					'titre': 'Appt. de Sim',
+					'quartier': 'Fairview',
+					'quartierClass' : 'fairview',
+					'address' : '766 willow St',
+					'icon': 'residential',
+					'nameType' : 'Résidentiel',
+					'forumLink' : '/f15-01-quartiers-nord' ,
+					'livingHere' : [['Sim Martell', '/u25', 'https://64.media.tumblr.com/15eea2c1ae5e82d93ffb87c2f02318b2/bff136aaa5183769-d9/s1280x1920/8da99dc4f50e8820e7fdf6b0d446304399b753f9.jpg', 'Locataire'], ]
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.121599, 49.264856],
+				}
+			},
+
+			{
+				'type': 'Feature',
+				'properties': {
 					'titre': 'Maison du nid des plantes',
 					'quartier': 'Arbutus Ridge',
 					'quartierClass' : 'arbutus',
@@ -20,7 +38,7 @@ const geojson  = {
 					'coordinates': [-123.169680, 49.243333],
 				}
 			},
-        
+				
 			{
 				'type': 'Feature',
 				'properties': {
@@ -39,23 +57,24 @@ const geojson  = {
 				}
 			},
 			{
-                'type': 'Feature',
-                'properties': {
-                  'titre': 'Maison de Markus & Rory Ashmore',
-                  'quartier': 'Autre',
-                  'quartierClass' : 'arbutus',
-                  'address' : '3077-3403 Dollarton Hwy',
-                  'icon': 'residential',
-                  'nameType' : 'Résidentiel',
-                  'forumLink' : '' ,
-                  'livingHere' : [['Markus Ashmore', '/u7', 'https://i.pinimg.com/originals/5d/c2/d2/5dc2d2002c9a082e5a66c1b30fdb32c8.gif', 'Propriétaire'], ]
-                },
-                'geometry': {
-                  'type': 'Point',
-                  'coordinates': [-122.979136, 49.307677],
-                }
-            },
-			/* AJOUT APRES ICI */
+				'type': 'Feature',
+				'properties': {
+					'titre': 'Maison de Markus & Rory Ashmore',
+					'quartier': 'Autre',
+					'quartierClass' : 'autre',
+					'address' : '1657 Ioco Rd',
+					'icon': 'residential',
+					'nameType' : 'Résidentiel',
+					'forumLink' : '' ,
+					'livingHere' : [['Markus Ashmore', '/u7', 'https://i.pinimg.com/1200x/b7/71/c0/b771c0ec871b9d404051dc7cc6b7526c.jpg', 'Propriétaire'], ]
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-122.870414, 49.302309],
+				}
+			},
+			
+			/* -------------------- AJOUT AVANT ICI ------------------------- */  
 
 		]
 	};
