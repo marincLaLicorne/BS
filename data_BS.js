@@ -1,6 +1,25 @@
 const geojson  = {
 		'type': 'FeatureCollection',
 		'features': [
+
+			{                            
+				'type': 'Feature',
+				'properties': {
+					'titre': 'Alouette River Shooting Range',
+					'quartier': 'Autre',
+					'quartierClass' : 'autre',
+					'address' : '20385 McNeil Rd',
+					'icon': 'sports',
+					'nameType' : 'Sports & Loisirs',
+					'forumLink' : '/f19-01-la-banlieue' ,
+					'livingHere' : [['Wren Sanderson', '/u62', 'https://i.postimg.cc/1z9fK7mY/tumblr-pix2nsi-DYH1x2tyt7o9-400.jpg', 'Instructeur de tir'], ]
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-122.65625387330775, 49.281457607142826],
+				}
+			},
+				
 			{
 				'type': 'Feature',
 				'properties': {
