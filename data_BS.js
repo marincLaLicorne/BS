@@ -73,6 +73,24 @@ const geojson  = {
 					'coordinates': [-122.870414, 49.302309],
 				}
 			},
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'The Pack',
+					'quartier': 'Grandview & Woodland',
+					'quartierClass' : 'grandview',
+					'address' : '1747 E Hastings St',
+					'icon': 'sports',
+					'nameType' : 'Sports & Loisirs',
+					'forumLink' : '' ,
+					'livingHere' : [['Markus Ashmore', '/u7', 'https://i.pinimg.com/1200x/b7/71/c0/b771c0ec871b9d404051dc7cc6b7526c.jpg', 'Propriétaire'], ['Max Morgan', '/u46', 'https://i.postimg.cc/tRnsqxY1/Screenshot-20261020-153858-Instagram.jpg', 'Professeur de Yoga'], ]
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.06915190575916, 49.28154446429158],
+				}
+			},
 			
 			/* -------------------- AJOUT AVANT ICI ------------------------- */  
 
