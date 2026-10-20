@@ -257,15 +257,15 @@ const geojson  = {
 					'titre': 'The Pink Bear',
 					'quartier': 'Kitsilano',
 					'quartierClass' : 'kitsilano',
-					'address' : '',
+					'address' : 'Kistilano Beach',
 					'icon': 'eating',
 					'nameType' : 'Gastronomie',
-					'forumLink' : '' ,
-					'livingHere' : [['Alejandro Cowie', '/u2', 'https://www.aht.li/3958593/aleicon.png', 'Propriétaire'],
-													['Nicky Valentine', '/u28', 'https://64.media.tumblr.com/7747c40e036265e8bf37730959385eee/c1aac183a9f0ef1a-e4/s400x600/68fc1a098afa2ec0339c459cf6822e8d5e17fccf.pnj', 'Gérant'], 
-													['Rae Pritchard', '/u40', 'none', 'Serveuse'],],
+					'forumLink' : 'https://bones-and-sickles.forumactif.com/f35-the-pink-bear' ,
+					'livingHere' : [['Alejandro Cowie', '/u2', 'https://www.aht.li/3958593/aleicon.png', 'Propriétaire'], 
+													['Nicky Valentyne', '/u28', 'https://64.media.tumblr.com/7747c40e036265e8bf37730959385eee/c1aac183a9f0ef1a-e4/s400x600/68fc1a098afa2ec0339c459cf6822e8d5e17fccf.pnj', 'Gérant'], 
+													['Rae Pritchard', '/u40', '', 'Serveuse'], ],
 					'descr' : 'Bar sportif',
-					'tags' : [],
+					'tags' : ["LGBT+ friendly"],
 				},
 				'geometry': {
 					'type': 'Point',
@@ -273,7 +273,6 @@ const geojson  = {
 				}
 			},
 				
-
 			{
 				'type': 'Feature',
 				'properties': {
