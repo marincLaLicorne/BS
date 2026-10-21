@@ -13,7 +13,7 @@ const geojson  = {
 					'nameType' : 'Sports & Loisirs',
 					'forumLink' : '/f19-01-la-banlieue' ,
 					'livingHere' : [['Wren Sanderson', '/u62', 'https://i.postimg.cc/1z9fK7mY/tumblr-pix2nsi-DYH1x2tyt7o9-400.jpg', 'Instructeur de tir'], ],
-					'descr' : '',
+					'descr' : 'Stand de tirs',
 					'tags' : [],
 				},
 				'geometry': {
@@ -242,7 +242,7 @@ const geojson  = {
 					'forumLink' : '' ,
 					'livingHere' : [['Markus Ashmore', '/u7', 'https://i.pinimg.com/1200x/b7/71/c0/b771c0ec871b9d404051dc7cc6b7526c.jpg', 'Propriétaire'], 
 													['Max Morgan', '/u46', 'https://i.postimg.cc/tRnsqxY1/Screenshot-20261020-153858-Instagram.jpg', 'Professeur de Yoga'], ],
-					'descr' : '',
+					'descr' : 'Salle de sport',
 					'tags' : [],
 				},
 				'geometry': {
@@ -304,7 +304,7 @@ const geojson  = {
 					'nameType' : 'Art & Culture',
 					'forumLink' : '' ,
 					'livingHere' : [['Miel Garrido', '/u35', 'https://i.pinimg.com/736x/c8/03/81/c803817f8cc899410e8d963eb24e5566.jpg', 'Décoratrice'], ],
-					'descr' : '',
+					'descr' : 'Studio de tournage',
 					'tags' : [],
 				},
 				'geometry': {
