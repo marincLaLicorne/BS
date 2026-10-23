@@ -313,6 +313,85 @@ const geojson  = {
 				}
 			},
 				
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'Test santé',
+					'quartier': 'Marpole',
+					'quartierClass' : 'marpole',
+					'address' : '',
+					'icon': 'health',
+					'nameType' : 'Santé',
+					'forumLink' : '' ,
+					'livingHere' : [['', '', '', ''], ],
+					'descr' : '',
+					'tags' : ["Pet friendly"," Associatif"," Local Business"],
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.107643, 49.227785],
+				}
+			},
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'Test Vie Quoti',
+					'quartier': 'Riley Park & South Combie',
+					'quartierClass' : 'riley',
+					'address' : '',
+					'icon': 'life',
+					'nameType' : 'Vie quotidienne',
+					'forumLink' : '' ,
+					'livingHere' : [['', '', '', ''], ],
+					'descr' : '',
+					'tags' : ["Pet friendly"," Associatif"," Local Business"],
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.053398, 49.218816],
+				}
+			},
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'Test QG',
+					'quartier': 'Killarney',
+					'quartierClass' : 'killarney',
+					'address' : '',
+					'icon': 'qg',
+					'nameType' : 'QG',
+					'forumLink' : '' ,
+					'livingHere' : [['', '', '', ''], ],
+					'descr' : '',
+					'tags' : ["Pet friendly"," Associatif"," Local Business"],
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.214073, 49.243477],
+				}
+			},
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'Test Misc',
+					'quartier': 'Killarney',
+					'quartierClass' : 'killarney',
+					'address' : '',
+					'icon': 'misc',
+					'nameType' : 'Divers',
+					'forumLink' : '' ,
+					'livingHere' : [['', '', '', ''], ],
+					'descr' : '',
+					'tags' : ["Pet friendly"," Associatif"," Local Business"],
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.174934, 49.220610],
+				}
+			},
 				
 			
 			/* -------------------- AJOUT AVANT ICI ------------------------- */  
