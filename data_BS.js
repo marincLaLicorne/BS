@@ -240,6 +240,27 @@ const geojson  = {
 				}
 			},
 				
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'Maison de Rain Ashmore',
+					'quartier': 'Dunbar Southlands',
+					'quartierClass' : 'dunbar',
+					'address' : '6488 Collingwood St',
+					'icon': 'residential',
+					'iconDisplay': 'house',
+					'nameType' : 'Résidentiel',
+					'forumLink' : 'https://bones-and-sickles.forumactif.com/f18-04-quartiers-sud' ,
+					'livingHere' : [['Rain Ashmore', '/u41', 'https://i.ibb.co/8Dzc1fZY/bdb38dfd74e85cb788f116c06072451a.jpg', 'Propriétaire'], 
+													['Viky Ashmore', '/u48', 'https://i.ibb.co/9HbHbppV/viky-icon.png', 'Bien-aimé'], ],
+					'descr' : '',
+					'tags' : [""],
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.18183891126257, 49.228184998200454],
+				}
+			},
 
 			{
 				'type': 'Feature',
@@ -327,92 +348,7 @@ const geojson  = {
 					'coordinates': [-123.02803424081864, 49.26226191778025],
 				}
 			},
-				
-			{
-				'type': 'Feature',
-				'properties': {
-					'titre': 'Test santé',
-					'quartier': 'Marpole',
-					'quartierClass' : 'marpole',
-					'address' : '',
-					'icon': 'health',
-					'iconDisplay': 'health_cross',
-					'nameType' : 'Santé',
-					'forumLink' : '' ,
-					'livingHere' : [['', '', '', ''], ],
-					'descr' : '',
-					'tags' : ["Pet friendly"," Associatif"," Local Business"],
-				},
-				'geometry': {
-					'type': 'Point',
-					'coordinates': [-123.107643, 49.227785],
-				}
-			},
 
-			{
-				'type': 'Feature',
-				'properties': {
-					'titre': 'Test Vie Quoti',
-					'quartier': 'Riley Park & South Combie',
-					'quartierClass' : 'riley',
-					'address' : '',
-					'icon': 'life',
-					'iconDisplay': 'school',
-					'nameType' : 'Vie quotidienne',
-					'forumLink' : '' ,
-					'livingHere' : [['', '', '', ''], ],
-					'descr' : '',
-					'tags' : ["Pet friendly"," Associatif"," Local Business"],
-				},
-				'geometry': {
-					'type': 'Point',
-					'coordinates': [-123.053398, 49.218816],
-				}
-			},
-
-			{
-				'type': 'Feature',
-				'properties': {
-					'titre': 'Test QG',
-					'quartier': 'Killarney',
-					'quartierClass' : 'killarney',
-					'address' : '',
-					'icon': 'qg',
-					'iconDisplay': 'castle',
-					'nameType' : 'QG',
-					'forumLink' : '' ,
-					'livingHere' : [['', '', '', ''], ],
-					'descr' : '',
-					'tags' : ["Pet friendly"," Associatif"," Local Business"],
-				},
-				'geometry': {
-					'type': 'Point',
-					'coordinates': [-123.214073, 49.243477],
-				}
-			},
-
-			{
-				'type': 'Feature',
-				'properties': {
-					'titre': 'Test Misc',
-					'quartier': 'Killarney',
-					'quartierClass' : 'killarney',
-					'address' : '',
-					'icon': 'misc',
-					'iconDisplay': 'map_pin_heart',
-					'nameType' : 'Divers',
-					'forumLink' : '' ,
-					'livingHere' : [['', '', '', ''], ],
-					'descr' : '',
-					'tags' : ["Pet friendly"," Associatif"," Local Business"],
-				},
-				'geometry': {
-					'type': 'Point',
-					'coordinates': [-123.174934, 49.220610],
-				}
-			},
-				
-			
 			/* -------------------- AJOUT AVANT ICI ------------------------- */  
 
 		]
