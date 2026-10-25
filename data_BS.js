@@ -339,13 +339,35 @@ const geojson  = {
 					'iconDisplay': 'theater_comedy',
 					'nameType' : 'Art & Culture',
 					'forumLink' : '' ,
-					'livingHere' : [['Miel Garrido', '/u35', 'https://i.pinimg.com/736x/c8/03/81/c803817f8cc899410e8d963eb24e5566.jpg', 'Décoratrice'], ],
+					'livingHere' : [['Miel Garrido', '/u35', 'https://i.pinimg.com/736x/c8/03/81/c803817f8cc899410e8d963eb24e5566.jpg', 'Décoratrice'],
+													['Sixtine Talbott', '/u60', 'https://www.aht.li/3993657/sixd.png', 'Garde du corps'],  ],
 					'descr' : 'Studio de tournage',
 					'tags' : [],
 				},
 				'geometry': {
 					'type': 'Point',
 					'coordinates': [-123.02803424081864, 49.26226191778025],
+				}
+			},
+
+			{
+				'type': 'Feature',
+				'properties': {
+					'titre': 'QG Quiet Graves',
+					'quartier': 'Grandview & Woodland',
+					'quartierClass' : 'grandview',
+					'address' : '',
+					'icon': 'qg',
+					'iconDisplay': 'castle',
+					'nameType' : 'QG',
+					'forumLink' : 'https://bones-and-sickles.forumactif.com/f16-02-quartiers-est' ,
+					'livingHere' : [],
+					'descr' : 'Entrée underground QG',
+					'tags' : ["Pet friendly"],
+				},
+				'geometry': {
+					'type': 'Point',
+					'coordinates': [-123.065773, 49.285967],
 				}
 			},
 
