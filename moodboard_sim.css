@@ -392,7 +392,7 @@
 			var(--_g) calc(var(--_d) + var(--x)) 0,
 			var(--_g) 0 calc(var(--_d) + var(--y));
 		mask-repeat: no-repeat;
-		background-size: 100%;
+		background-size: auto 100%;
 		background-position: 50%;
 
 	}
