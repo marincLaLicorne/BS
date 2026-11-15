@@ -110,6 +110,23 @@
 			padding: 5px 15px 5px 10px;
 		}
 	}
+
+	.unread-mp { /* La petite icone qui indique les messages non lus */
+	  display: block;
+	  float: none;
+	  background: var(--accentSec);
+	  color: var(--neutralDark);
+	  text-align: center;
+	  width: 18px;
+	  height: 18px;
+	  border-radius: 10px;
+	  margin-left: 0;
+	  top: 2px;
+	  position: absolute;
+	  right: 0;
+	  font-family: var(--font-title);
+	  z-index: 99;
+	}
 }
 
 .nav-logout, .nav-register { /* Ecrase ce qui vient du BT */
