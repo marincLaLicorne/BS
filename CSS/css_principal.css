@@ -5,15 +5,15 @@
 
 /* === ANIMATIONS === */
 @keyframes glowingEffectBox {
-  0% {box-shadow: 0 0 10px var(--accentClrOpa);}
-  50% {box-shadow: 0 0 5px var(--accentClrOpa);}
-  100% {box-shadow: 0 0 10px var(--accentClrOpa);}
+	0% {box-shadow: 0 0 10px var(--accentClrOpa);}
+	50% {box-shadow: 0 0 5px var(--accentClrOpa);}
+	100% {box-shadow: 0 0 10px var(--accentClrOpa);}
 }
 
 @keyframes glowingEffectText {
-  0% {text-shadow: 0 0 10px var(--accentClrOpa);}
-  50% {text-shadow: 0 0 5px var(--accentClrOpa);}
-  100% {text-shadow: 0 0 10px var(--accentClrOpa);}
+	0% {text-shadow: 0 0 10px var(--accentClrOpa);}
+	50% {text-shadow: 0 0 5px var(--accentClrOpa);}
+	100% {text-shadow: 0 0 10px var(--accentClrOpa);}
 }
 
 /* === AUTRE EFFETS === */ 
@@ -112,20 +112,20 @@
 	}
 
 	.unread-mp { /* La petite icone qui indique les messages non lus */
-	  display: block;
-	  float: none;
-	  background: var(--accentSec);
-	  color: var(--neutralDark);
-	  text-align: center;
-	  width: 18px;
-	  height: 18px;
-	  border-radius: 10px;
-	  margin-left: 0;
-	  top: 2px;
-	  position: absolute;
-	  right: 0;
-	  font-family: var(--font-title);
-	  z-index: 99;
+		display: block;
+		float: none;
+		background: var(--accentSec);
+		color: var(--neutralDark);
+		text-align: center;
+		width: 18px;
+		height: 18px;
+		border-radius: 10px;
+		margin-left: 0;
+		top: 2px;
+		position: absolute;
+		right: 0;
+		font-family: var(--font-title);
+		z-index: 99;
 	}
 }
 
@@ -161,14 +161,14 @@
 	.welcome { /* Welcome home, [user] */
 		grid-area: 1 / 1 / 2 / 3;
 		font-size: 26px;
-        font-family: var(--font-title);
-        align-content: end;
-        margin: 0 0 -15px 0;
-        span {
-        	background: var(--gradient);
+				font-family: var(--font-title);
+				align-content: end;
+				margin: 0 0 -15px 0;
+				span {
+					background: var(--gradient);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
-        }
+				}
 	}
 	.timeline { /* Info de lieu et de date du forum */
 		grid-area: 2 / 1 / 3 / 3; 
@@ -195,6 +195,7 @@
 	}
 	.contexte { /* Contexte du forum */
 		grid-area: 3 / 1 / 4 / 2;
+		padding: 5px 0;
 		.bloc { /* Bloc principal */
 			width: 420px;
 			padding: 15px;
