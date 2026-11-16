@@ -345,6 +345,7 @@
 			}
 		}
 		.btmHeader {
+			margin: 0 0 -5px 0;
 			&:before {
 				mask:
 			    radial-gradient(45px at 45px 100%,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px,
@@ -353,6 +354,7 @@
 			}
 		}
 		.topHeader {
+			margin: -5px 0 0 0;
 			&:before {
 				mask:
 				  radial-gradient(45px at 45px 0,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px,
