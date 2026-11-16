@@ -349,12 +349,21 @@
 /* === BASE COMMUNE === */
 
 .container.category{ /* Box qui contient une catégorie entière */
-	margin: 10px 0 45px 0;
-	position: relative;
-	border-radius: 40px;
-	corner-shape: scoop;
-	border: solid 1px var(--accentClrDark);
 	background: transparent;
+  margin: 10px 0 45px 0;
+  position: relative;
+  border-radius: 40px;
+  mask: radial-gradient(45px at 45px 45px,#0000 90%,#000) -45px -45px; 
+  &:before { 
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: var(--gradient);
+		mask:
+			radial-gradient(45px at 45px 45px,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px -45px,
+			linear-gradient(90deg,#000 2px,#0000 0) -1px 50% /100% calc(100% - 90px + 1px) repeat-x,
+			linear-gradient(#000 2px,#0000 0) 50% -1px/calc(100% - 90px + 1px) 100% repeat-y;
+	}
 }
 
 .cate_title { /* Titre d'une catégorie */
@@ -663,3 +672,5 @@ a.forumtitle { /* On rends le lien esthétiquement plaisant */
 		}
 	} 
 }
+
+/* ============= PART VI : HUB/QEEL ============= */ 
