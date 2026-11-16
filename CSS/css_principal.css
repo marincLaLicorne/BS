@@ -25,6 +25,19 @@
 	-webkit-backdrop-filter: blur(2px);
 }
 
+.fourCorners {
+	position: relative;
+	&:before { 
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: var(--gradient);
+		mask:
+			radial-gradient(45px at 45px 45px,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px -45px,
+			linear-gradient(90deg,#000 2px,#0000 0) -1px 50% /100% calc(100% - 90px + 1px) repeat-x,
+			linear-gradient(#000 2px,#0000 0) 50% -1px/calc(100% - 90px + 1px) 100% repeat-y;
+	}
+}
 
 /* ============= PART II : NAVIGATION ============= */ 
 /* === BASIQUE === */
@@ -316,25 +329,14 @@
 			width: fit-content;
 			box-shadow: 0 0 10px var(--accentClrOpa);
 			animation: glowingEffectBox 4s infinite;
-			position: relative;
 			mask: radial-gradient(45px at 45px 45px,#0000 90%,#000) -45px -45px; 
-			&:before { 
-				content: "";
-				position: absolute;
-				inset: 0;
-				background: var(--gradient);
-				mask:
-					radial-gradient(45px at 45px 45px,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px -45px,
-					linear-gradient(90deg,#000 2px,#0000 0) -1px 50% /100% calc(100% - 90px + 1px) repeat-x,
-					linear-gradient(#000 2px,#0000 0) 50% -1px/calc(100% - 90px + 1px) 100% repeat-y;
-			}
 		}
 		.topHeader, .btmHeader {
 			position: relative;
-			margin: -5px -1% 0px -1%;
+			margin: -5px 0 0 0;
 			height: 45px;
 			corner-shape: unset;
-			width: 102%;
+			width: 100%;
 			&:before {
 				content: "";
 				position: absolute;
@@ -343,7 +345,6 @@
 			}
 		}
 		.btmHeader {
-			margin: 0 -1% -5px -1%;
 			&:before {
 				mask:
 			    radial-gradient(45px at 45px 100%,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px,
@@ -352,7 +353,6 @@
 			}
 		}
 		.topHeader {
-			margin: -5px -1% 0px -1%;
 			&:before {
 				mask:
 				  radial-gradient(45px at 45px 0,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px,
@@ -379,19 +379,7 @@
 .container.category{ /* Box qui contient une catégorie entière */
 	background: var(--glass);
   margin: 10px 0 45px 0;
-  position: relative;
-  border-radius: 40px;
   mask: radial-gradient(45px at 45px 45px,#0000 90%,#000) -45px -45px; 
-  &:before { 
-		content: "";
-		position: absolute;
-		inset: 0;
-		background: var(--gradient);
-		mask:
-			radial-gradient(45px at 45px 45px,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px -45px,
-			linear-gradient(90deg,#000 2px,#0000 0) -1px 50% /100% calc(100% - 90px + 1px) repeat-x,
-			linear-gradient(#000 2px,#0000 0) 50% -1px/calc(100% - 90px + 1px) 100% repeat-y;
-	}
 }
 
 .cate_title { /* Titre d'une catégorie */
