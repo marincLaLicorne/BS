@@ -1,6 +1,15 @@
 /* V2 DE BS - codé par Marinc */
 /* Basé sur la V3.5 du Blank Theme */ 
 
+/* === Sommaire === */
+/* I. Elements du code qui peuvent être appelé n'importe ou */
+/* II. Navigation */
+/* III. Panneau latéral (WIP) */
+/* IV. Header */
+/* V. Catégories */
+/* VI. QEEL/Hub */
+/* VII. Listing des sujets */
+
 /* ============= PART I : Elements qui peuvent être appelé tel quel dans le code ============= */ 
 
 /* === ANIMATIONS === */
@@ -692,3 +701,297 @@ a.forumtitle { /* On rends le lien esthétiquement plaisant */
 }
 
 /* ============= PART VI : HUB/QEEL ============= */ 
+
+.hub { /* Boite principale  */
+	display: block;
+	background: transparent;
+	border-radius: 0;
+	padding: 10px;
+	margin: 50px 0 20px 0;
+	position: relative;
+
+	/* Retire la dernière séparation des listes des membres */
+	.separator:last-of-type {
+		display: none;
+	}
+}
+
+.hub_container { /*Boite secondaire*/
+	width: 915px;
+	margin: 0 auto;
+	display: flex;
+	align-items: end;
+}
+
+.hub_left, .hub_right { /* Boite droite et gauche, general */
+	background: var(--glass);
+	width: 340px;
+	height: 265px;
+	position: relative;
+	align-content: center;
+}
+
+.hub_central { /* Boite central pour l'avatar du dernier inscrit */
+	text-align: center;
+	width: 230px;
+	height: 375px;
+	position: relative;
+	background: var(--glass);
+	mask: radial-gradient(45px at 45px 0,#0000 95%,#000) -45px;
+	z-index: 45;
+	&:before {
+	  content: "";
+	  position: absolute;
+	  inset: 0;
+	  background: var(--gradient);
+	  mask:
+		radial-gradient(45px at 45px 0,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px,
+		conic-gradient(at left 1px bottom 1px,#0000 25%,#000 0) 0 100%/calc(100% - 1px) calc(100% - 45px + 1px) repeat-x,
+		linear-gradient(#000 0 0) top  /calc(100% - 90px + 1px) 1px no-repeat;
+	}
+}
+
+.hub_left { /* boite gauche : statistiques */
+	text-align: right;
+	mask: radial-gradient(45px at 0 0,#0000 95%,#000);
+	margin-right: -1px;
+	&:before {
+	  content: "";
+	  position: absolute;
+	  inset: 0;
+	  background: var(--gradient);
+	  mask:
+		radial-gradient(45px at 0 0,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000),
+		conic-gradient(from -90deg at top 1px right 1px,#000 75%,#0000 0) 100% 0/calc(100% - 45px + 1px) 100% repeat-y,
+		conic-gradient(at bottom 1px left 1px,#0000 25%,#000 0) 0 100%/100% calc(100% - 45px + 1px) repeat-x;
+	}
+}
+
+
+.hub_right { /* boite droite : Infos generale et crédits */
+	text-align: left;
+	mask: radial-gradient(45px at 100% 0,#0000 90%,#000);
+	margin-left: -1px;
+	&:before {
+	  content: "";
+	  position: absolute;
+	  inset: 0;
+	  background: var(--gradient);
+	  mask:
+		radial-gradient(45px at 100% 0,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000),
+		conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0) 0 0/calc(100% - 45px + 1px) 100% repeat-y,
+		conic-gradient(at bottom 1px right 1px,#000 75%,#0000 0) 0 100%/100% calc(100% - 45px + 1px) repeat-x;
+	}
+}
+
+.hub_title, .hub_miniContainer, .hub_avatar, .hub_new { /* Systeme de debug */
+	position: relative;
+}
+
+.hub_title { /* Encart de titre */
+	font-size: 21px;
+	font-family: var(--font-title);
+	background: var(--gradientSec);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-align: inherit;
+	text-transform: none;
+	padding: 0 15px;
+	.bullet { 
+		background: var(--gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+.hub_miniContainer { /* Conteneur pour les informations */
+	text-align: left;
+	background: var(--neutralDark);
+	border-radius: 5px;
+	box-shadow: 2px 2px 4px var(--shadow);
+	width: 92%;
+	margin: 0 auto;
+	height: 195px;
+	padding: 10px;
+}
+
+.hub_avatar { /* Gestion de l'avatar */
+	width: 200px;
+	overflow: hidden;
+	height: 235px;
+	margin: 10px auto;
+	border: solid 1px var(--accentClrDark);
+	img {
+		width: 200px;
+		height: 235px;
+	}
+}
+
+.hub_top { /* Le petit bidule en haut de l'avatar */
+	position: relative;
+	margin: 15px auto 5px auto;
+	height: 40px;
+	width: 200px;
+	&:before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: var(--gradient);
+		mask:
+		  radial-gradient(40px at 40px 0,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -40px,
+		  conic-gradient(at left 1px bottom 1px,#0000 25%,#000 0) 0 100%/calc(100% - 1px) calc(100% - 40px + 1px) repeat-x,
+		  linear-gradient(#000 0 0) top  /calc(100% - 80px + 1px) 1px no-repeat;
+	}
+}
+
+.hub_details { /* Debug du BT */
+	background-color: transparent;
+	padding: 3px;
+}
+
+.hub_credits { /* Boite a crédits */
+	padding: 5px;
+	font-family: var(--font-var);
+	font-size: 14px;
+	overflow: auto;
+	height: 70px;
+	a {
+		font-family: var(--font);
+	}
+	a.infos {
+		font-family: var(--font-var);
+    	color: var(--accentSec);
+    	&:hover {
+    		color: var(--accentSecDark);
+    	}
+	}
+}
+
+.hub_chart, .hub_connected { /* Boite superieure avec les statistiques */
+	height: 105px;
+	border-bottom: solid 1px var(--accentClr);
+	font-family: var(--font-var);
+	overflow: auto;
+	a {
+		font-family: var(--font);
+	}
+	strong {
+		font-weight: 400;
+		font-size: 16px;
+		color: var(--accentSec);
+	}
+}
+
+.hub_new { /* Info nouveau inscrit */
+	font-family: var(--font-var);
+	height: 50px;
+	align-content: center;
+	a.lastUser-link {
+		font-size: 20px;
+		font-family: var(--font-title);
+		line-height: 14px;
+		font-weight: 400;
+	}
+}
+
+
+
+/* === CHARTING DES GROUPES === */
+.grp_creature {
+	text-align: center;
+	margin: 0 5px;
+	display: flex;
+	justify-content: left;
+}
+
+.grp_titre {
+	font-size: var(--title-size);
+	text-align: left;
+	margin: 0 7px 0 0;
+	span {
+		font-size: 26px;
+		background: var(--gradientSec);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+.grp_stat { /* Petite boite qui prends la dimension du nombre de gens dans chaque groupe */
+	border-radius: 0;
+	margin: 8px 0;
+	width: 10%; /* TEMP */
+	flex: 0 0 auto;
+	cursor: pointer;
+
+	&.grp-harpies { background: var(--harpies); color : var(--harpies);}
+	&.grp-dryades { background: var(--dryades); color : var(--dryades); border-radius: 3px 0 0 3px;}
+	&.grp-sirenes { background: var(--sirenes); color : var(--sirenes);}
+	&.grp-wazaghs { background: var(--wazagh); color : var(--wazagh); border-radius: 0 3px 3px 0;}
+
+	&.grp-lycans { background:var(--lycans); color :var(--lycans);}
+	&.grp-stryges { background: var(--stryges); color : var(--stryges); border-radius: 3px 0 0 3px;}
+	&.grp-vampires { background: var(--vampires); color : var(--vampires);}
+	&.grp-banshees { background: var(--banshees); color : var(--banshees); border-radius: 0 3px 3px 0;}
+	&.grp-spectres { background: var(--spectres); color : var(--spectres);}
+
+	&.grp-normies { background: var(--normies); color : var(--normies); border-radius: 3px 0 0 3px;}
+	&.grp-spicy { background: var(--spicy); color : var(--spicy);}
+	&.grp-chasseurs { background: var(--chasseurs); color : var(--chasseurs); border-radius: 0 3px 3px 0;}
+}
+
+.grp_card { /* Tooltip au survol de la boite sus nommé */
+	position: absolute;
+	padding: 10px;
+	margin: -10px 0 0 10px;
+	border-radius: 5px;
+	display: none;
+	width: fit-content;
+	text-align: left;
+	color: var(--textColor);
+	box-shadow: var(--shadow) 2px 2px 4px;
+	z-index: 99;
+	.bullet {
+		filter: brightness(60%);
+	}
+	a {
+		font-family: var(--font-title);
+		color: var(--neutralDark);
+		letter-spacing: 0;
+		transition: all ease-in-out 0.25s;
+		font-weight: 400;
+		&:hover {
+			letter-spacing: 1px;
+			text-shadow: 0 0 5px var(--accentClrOpa);
+		}
+	}
+}
+
+.grp_titreCard { /* Nom du groupe */
+	font-size: var(--medium-size);
+	font-family: var(--font-accent);
+	width: fit-content;
+	background: var(--FAM-accentClr);
+	border-radius: 3px;
+	padding: 5px 10px;
+	color: var(--neutralDark);
+}
+
+.grp_stat:hover .grp_card{ display:flex;}
+
+/* Gestion des couleurs */
+#grp-harpies {.grp_titreCard{ background:var(--harpies);} .bullet{ color: var(--harpies); }}
+#grp-dryades {.grp_titreCard{ background:var(--dryades);} .bullet{ color: var(--dryades); }}
+#grp-sirenes {.grp_titreCard{ background:var(--sirenes);} .bullet{ color: var(--sirenes); }}
+#grp-wazaghs {.grp_titreCard{ background:var(--wazagh);} .bullet{ color: var(--wazagh); }}
+
+#grp-lycans {.grp_titreCard{ background:var(--lycans);} .bullet{ color: var(--lycans); }}
+#grp-stryges {.grp_titreCard{ background:var(--stryges);} .bullet{ color: var(--stryges); }}
+#grp-vampires {.grp_titreCard{ background:var(--vampires);} .bullet{ color: var(--vampires); }}
+#grp-banshees {.grp_titreCard{ background:var(--banshees);} .bullet{ color: var(--banshees); }}
+#grp-spectres {.grp_titreCard{ background:var(--spectres);} .bullet{ color: var(--spectres); }}
+
+#grp-normies {.grp_titreCard{ background:var(--normies);} .bullet{ color: var(--normies); }}
+#grp-spicy {.grp_titreCard{ background:var(--spicy);} .bullet{ color: var(--spicy); }}
+#grp-chasseurs {.grp_titreCard{ background:var(--chasseurs);} .bullet{ color: var(--chasseurs); }}
+
+/* ============= PART VII : AFFICHAGE LISTE SUJETS ============= */ 
