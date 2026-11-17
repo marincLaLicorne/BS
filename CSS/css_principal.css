@@ -9,6 +9,7 @@
 /* V. Catégories */
 /* VI. QEEL/Hub */
 /* VII. Listing des sujets */
+/* VIII. Affichage d'un sujet */
 
 /* ============= PART I : Elements qui peuvent être appelé tel quel dans le code ============= */ 
 
@@ -388,9 +389,9 @@
 /* === BASE COMMUNE === */
 
 .container.category{ /* Box qui contient une catégorie entière */
-	background: var(--glass);
+	/*background: var(--glass);*/
   margin: 10px 0 45px 0;
-  mask: radial-gradient(45px at 45px 45px,#0000 90%,#000) -45px -45px; 
+	/*mask: radial-gradient(45px at 45px 45px,#0000 90%,#000) -45px -45px; */
 }
 
 .cate_title { /* Titre d'une catégorie */
@@ -995,3 +996,307 @@ a.forumtitle { /* On rends le lien esthétiquement plaisant */
 #grp-chasseurs {.grp_titreCard{ background:var(--chasseurs);} .bullet{ color: var(--chasseurs); }}
 
 /* ============= PART VII : AFFICHAGE LISTE SUJETS ============= */ 
+/* ===== Templaces : topics_list_box - viewforum_body =============== */
+
+.container.topic_list {
+	margin: 10px 0;
+
+	.topic_title { /* Titre de la catégorie */
+		border-bottom: solid 1px var(--accentClrDark);
+		height: 45px;
+		h1 {
+			background: var(--gradientSec);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-size: 30px;
+			font-family: var(--font-title);
+			text-transform: none;
+			margin: 5px 0;
+			padding: 0px 50px;
+		}
+	}
+	.separator { /* Ligne qui servent de séparation */
+		width: 100%;
+		height: 1px;
+		background: var(--gradient);
+		margin: 0 0 10px 0;
+	}
+
+	#users_here { /* Encart en bas qui indique qui est sur le topic */
+		width: calc(100% - 100px);
+		margin: 0 auto;
+		background: var(--neutralDark);
+		height: 45px;
+		border-radius: 5px;
+		box-shadow: 2px 2px 4px var(--shadow);
+		padding: 5px 15px;
+		font-family: var(--font-var);
+		a {
+			font-family: var(--font);
+			strong {
+				font-weight: 400;
+			}
+		}
+	}
+
+}
+
+.forum-page_desc { /* Description du forum */
+	margin: 10px;
+	background: var(--neutralDark);
+	border-radius: 5px;
+	color: var(--textColor);
+	padding: 10px;
+	box-shadow: 2px 2px 4px var(--shadow);
+}
+
+
+.page-actions .button { /* Bouton NOUVEAU */
+	span {
+		background: var(--gradientSec);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		letter-spacing: 0;
+		transition: letter-spacing ease-in-out 0.25s;
+		font-size: 20px;
+		&:hover {
+			background: var(--gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			letter-spacing: 1px;
+			text-shadow: 0 0 5px var(--accentClrOpa);
+		}
+	}
+}
+
+.buttons{ /* Gestion des liens surveillance et marquer comme lu */
+	a {
+		font-family: var(--font-var);
+	}
+	.linkMod a{
+		font-family: var(--font);
+	}
+	.bullet {
+		color: var(--accentClr);
+		display: inline-block;
+		margin: 0 5px;
+	}
+}
+
+.paginationFlex { /* Pagination avec le separateur qui s'adapte  */
+	display: flex;
+	width: 80%;
+	align-items: center;
+	justify-content: right;
+	.separator {
+		max-width: 80%;
+		width: -webkit-fill-available;
+		height: 1px;
+		background: var(--gradient);
+		margin: 0 15px;
+	}
+	.pagination {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		min-width: fit-content;
+	}
+
+}
+
+.forum-page_desc { /* Specifique à la premiere catégorie */
+	.gensmall {
+		display: inline-block;
+		width: fit-content;
+		height: fit-content;
+		font-size: 18px;
+		font-family: var(--font-title);
+		margin: 3px 3px 0 0;
+		cursor: pointer;
+		padding: 3px 16px;
+		background: var(--neutralDarker);
+		font-weight: 400;
+		color: var(--accentClr);
+		transition: all ease-in-out 0.25s;
+
+		&:hover {
+			color: var(--accentSec);
+			text-shadow: 0 0 10px var(--accentClrOpa);
+		} 
+	}
+}
+
+
+/* === AFFICHAGE D'UN SUJET === */
+
+.topicslist_row { /* Une ligne, un sujet */
+	background: transparent;
+	border-radius: 0;
+	padding: 0;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	height: 70px;
+	width: fit-content;
+	margin: 0 auto 10px auto;
+}
+
+.topicslist_indic { /* Indicateur de l'état du post (nouveau, locked...) */
+	width: 10px;
+	height: 100%;
+	background: var(--neutralDark);
+	border-radius: 5px 0 0 5px;
+	box-shadow: 2px 2px 4px var(--shadow);
+}
+
+.post_new .topicslist_indic { background: var(--accentSec); } 
+.post_locked .topicslist_indic { background: var(--neutralLighter); } 
+
+.topicslist_flex { /* Boite principale des informations */
+	display: flex;
+	height: -webkit-fill-available;
+	background: var(--neutralDark);
+	padding: 10px;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 2px 2px 4px var(--shadow);
+}
+
+.topicslist_partA { /* Titre du sujet, description et pagination */
+	width: 490px;
+}
+.topicslist_partB { /* Auteur et nombre de vues */
+	font-size: var(--little-size);
+	width: 135px;
+	align-content: center;
+    border-left: solid 1px var(--neutralLight);
+    border-right: solid 1px var(--neutralLight);
+}
+.topicslist_partC { /* Dernier posteur */
+	width: 210px;
+	align-items: center;
+	font-size: var(--little-size);
+	.gensmall{
+		font-size: var(--normal-size);
+	}
+}
+.topicslist_partA, .topicslist_partC {
+	display: flex;
+}
+
+.lastpostavatar img { /* Avatar du dernier posteur */
+	border-radius: 5px;
+	border: solid 1px var(--accentClr);
+	margin: 0 10px;
+}
+
+/* = PART A = */
+.topicslist_infos { /* Conteneur des informations de bases */
+	flex-grow: 100;
+	max-width: 490px;
+	padding: 0 10px 0 0;
+}
+
+.topicslist_infos:has(.topic-type:not(:empty)) .topictitle { /* Max width differente pour le titre, s'il y a un tag devant */
+	max-width: 390px;
+}
+
+.topictitle { /* Titre du sujet */
+	font-size: var(--medium-size);
+	/* permet de raccourir les titres trop long ainsi : "Titre du suj..." */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	max-width: 465px;
+	white-space: nowrap;
+	vertical-align: bottom;
+	color: var(--accentSec);
+}
+
+.topic-type { /* Tag note, annonce, global */
+	background: var(--neutral);
+    padding: 0 10px;
+    margin: 0 5px 0 0;
+    font-family: var(--font-title);
+    color: var(--accentClr);
+    font-size: 15px;
+    &:empty {
+    	display: none;
+    }
+}
+
+.participate { /* Indicateur de participation sur un topic */
+    color: var(--accentClr);
+}
+
+.topicslist-description { /* Descrition du sujet */
+	border-top: none;
+	padding-top: 0;
+	width: -webkit-fill-available;
+	font-size: var(--little-size);
+	margin: 0 0 0 30px;
+    color: var(--textColorAccent);
+}
+
+/* = PART B = */
+.topicslist-stats { /* Information vues et auteur.ice */
+	text-align: center;
+	.bullet {
+	    color: var(--accentClr);
+	}
+}
+.topic-author {
+	display: block;
+	font-size: var(--normal-size);
+}
+
+/* = PART C = */
+.topicslist-infos 
+/* Avatar du dernier posteur (couplé avec la class utilitaire ".u-img-square") */
+.topicslist-avatar-lastpost img {
+	--size: 50px;
+}
+.topicslist-infos img{ margin: 0 0 0 5px; }
+/* Conteneur du dernier message */
+.topicslist-lastpost {
+	width: 180px;
+}
+
+
+
+/* ligne qui séparent les annonces et les notes des autres sujets (à activer dans "message > configuration") */
+.topic_separator {
+	height: 1px;
+	background: var(--accentClrDark);
+	margin-bottom: 10px;
+}
+
+/* == TRI DES SUJETS == */
+#sort-topics {
+	position: relative;
+	anchor-name: --sort-topics;
+}
+
+#sort-btn.expanded {
+	background: var(--accentClr);
+	color: var(--neutral);
+}
+
+/* Menu de tri des sujets */
+.sort-form {
+	width: max-content;
+	border: 1px solid var(--accentClr);
+	border-radius: 5px;
+	padding: 10px;
+	display: none;
+}
+
+.expanded~.sort-form {
+	display: block;
+	position: absolute;
+	position-anchor: --sort-topics;
+	right: 0;
+	margin-top: 5px;
+	z-index:10;
+}
+
+/* ============= PART VIII : AFFICHAGE D'UN SUJET ============= */ 
