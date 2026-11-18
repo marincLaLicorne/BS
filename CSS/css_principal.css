@@ -10,6 +10,7 @@
 /* VI. QEEL/Hub */
 /* VII. Listing des sujets */
 /* VIII. Affichage d'un sujet */
+/* IX. Editeur de texte */
 
 /* ============= PART I : Elements qui peuvent être appelé tel quel dans le code ============= */ 
 
@@ -1300,3 +1301,616 @@ a.forumtitle { /* On rends le lien esthétiquement plaisant */
 }
 
 /* ============= PART VIII : AFFICHAGE D'UN SUJET ============= */ 
+/* === PAGE PRINCIPALE === */
+
+.container.cornerTop {
+	mask: radial-gradient(45px at 45px 0,#0000 90%,#000) -45px;
+	border-radius: 0;
+	&:before {
+		mask:
+		  radial-gradient(45px at 45px 0,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px,
+		  conic-gradient(at left 1px bottom 1px,#0000 25%,#000 0) 0 100%/calc(100% - 1px) calc(100% - 45px + 1px) repeat-x,
+		  linear-gradient(#000 0 0) top  /calc(100% - 90px + 1px) 1px no-repeat;
+	}
+}
+
+.container.cornerBtm {
+	 mask: radial-gradient(45px at 45px 100%,#0000 90%,#000) -45px;
+	 border-radius: 0;
+	&:before {
+		mask:
+		  radial-gradient(45px at 45px 100%,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px,
+		  conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0) 0 0/ calc(100% - 1px) calc(100% - 45px + 1px) repeat-x,
+		  linear-gradient(#000 0 0) bottom/calc(100% - 90px + 1px) 1px no-repeat;
+	}
+}
+
+
+/*=== PARTIE HAUTE ===*/
+.sujet_top { /* Coin à sondage -- globalement useless ici */
+	background: var(--neutralDark);
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 25px 0 0 0;
+	&:empty {
+		display: none;
+	}
+}
+
+.sujet_title { /*Titre du sujet*/
+	padding: 0;
+	margin: 0;
+	text-align: right;
+	width: -webkit-fill-available;
+	.page-title {  
+		text-transform: none !important;
+		font-weight: normal;
+		margin: 0;
+		line-height: 20px;
+	}
+}
+
+.post_main { /* Participants et titre du forum */
+	display: flex;
+	padding: 5px 50px;
+	gap: 10px;
+	align-items: center;
+	min-height: 40px;
+}
+
+.container .separator { /* Ligne qui servent de séparation */
+	width: 100%;
+	height: 1px;
+	background: var(--gradient);
+	margin: 0 0 10px 0;
+}
+
+
+/* === POST === */
+.post_row { /* Post principal */
+	display: grid;
+	grid-template-rows: max-content auto;
+	grid-template-columns: min-content 1fr;
+	background: var(--neutral);
+	border-radius: 5px;
+	margin-bottom: 10px;
+	box-shadow: 2px 2px 4px var(--shadow);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* === POST - Bandeau haut : Image, Pseudo, rang, date === */
+.post_details { /* Contenant principal */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px;
+	position: relative;
+	background: var(--neutralDark);
+	height: 60px;
+	position: sticky;
+	top: 0px;
+	z-index: 99;
+	border-bottom: 1px solid var(--accentSec);
+	overflow: hidden;
+	border-radius: 3px 3px 0 0;
+}
+
+.post_info { /* Image, Pseudo, Rank */
+		display: flex;
+		align-items: center;
+}
+
+.post_pseudo { /* Affichage du pseudo */
+	padding: 0 15px;
+	a {
+		font-family: var(--font-title);
+		font-size: 24px;
+	}
+	strong {
+		font-weight: normal;
+	}
+}
+
+.field-image-de-profil img { /*Image en carré*/
+		width: 60px;
+		height: 60px;
+}
+.image_profil { /* Son contenant */
+	position: relative;
+	position: relative;
+	width: 60px;
+	height: 60px;
+	background: var(--neutral);
+	overflow: hidden;
+	border-right: solid 1px var(--accentClrDark);
+}
+.icone { /* Icone de connexion */
+		background: var(--icone-rouge);
+		width: 15px;
+		height: 15px;
+		border-radius: 15px 0 0 0;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+}
+
+.icone.online { /* Icone de connexion */
+	background: var(--icone-verte) ;
+}
+
+.post_rank { /* Rang */
+	background: transparent;
+	color: var(--textColorAccent);
+	margin: 3px 10px 0 0px;
+}
+
+.post_rank, .balise_joueur { /* Rang et balise couleur */
+		padding: 5px 15px;
+		border-radius: 20px;
+		font-style: italic;
+
+		&:empty {
+		display: none;
+	}
+}
+
+.post_date { /* Info date + id # */
+	padding: 0 15px;
+	color: var(--accentClr);
+	time {
+		font-family: var(--font-code);
+	}
+	a {
+		color:var(--accentSec);
+	}
+}
+
+/* === POST - Bouton d'édition du message === */
+.post_edit { /* Conteneur des boutons d'édition du message */
+	position: absolute;
+	top: 60px;
+	right: 10px;
+	background: var(--neutralDark);
+	padding: 5px 20px;
+	border-radius: 0 0 10px 10px;
+}
+
+/* Boutons d'édition du post */
+.edition-buttons {
+	position: relative;
+	display: flex;
+}
+
+/*UN SEUL bouton (éditer, citer, supprimer, "j'aime") */
+.edition-buttons [class^="btn-"],
+.rep-button {
+	background: transparent;
+	padding: 4px 7px;
+	font-weight: 600;
+	border-radius: 5px;
+	margin: 0;
+	color: var(--accentClr);
+	align-content: center;
+
+	&:hover {
+		background: var(--neutralDark);
+		color: var(--accentSecDark);
+		text-shadow: 0 0 5px var(--accentClrOpa);
+		letter-spacing: 0;
+	}
+
+	/* Cache pour les invités */
+	&[href=""] {
+		display: none;
+	}
+}
+
+/* Bouton "j'aime" */ /* DEPREC */
+.rep-button {
+	background: var(--neutralDark);
+}
+
+/* Nombre de like*/ /* DEPREC */
+.rep-button .rep-nb {
+	margin-left: 5px;
+	padding: 0 5px;
+	font-size: var(--little-size);
+	background: var(--neutralDarker);
+	border-radius: 3px;
+}
+
+/* Bouton une fois liké */ /* DEPREC */
+.rep-button.fa_liked .rep-nb {
+	background: var(--accentClr);
+	color: var(--neutral);
+}
+
+
+/* === POST - Profil (latéral) === */
+/* ··· PROFIL DU POSTEUR ··· */
+.nav_profil { /* Boite principale */
+	background: var(--neutralDark);
+	width: fit-content;
+	border-right: solid 1px var(--accentSec);
+}
+
+.post_profile { /* Contenant secondaire */
+	padding: 0;
+	background: var(--neutralDark);
+	margin: 0 0 10px 0;
+	max-height: 840px;
+	position: sticky;
+	top: 60px;
+	width: 225px;
+}
+
+.post_avatar { /* Avatar */
+	overflow: hidden;
+	width: 225px;
+	position: relative;
+	font-size: var(--little-size);
+
+	&:hover .post_user {
+		transform: translate(0, 0%);
+	}
+	&:hover img {
+		filter: grayscale(0.5);
+		transition: filter 1s ease-in-out;
+	}
+
+	img {
+		max-width: 100%!important;
+	}
+}
+
+.post_user { /* Information sur le posteur (nom, pronoms, nombre de messages ... ) */
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backdrop-filter: blur(10px);
+		background: rgba(0,0,0,0.25);
+		background-size: 400%;
+		top: 0;
+		transform: translate(0, -100%);
+		transition: transform 1s ease-in-out;
+		padding: 15px;
+}
+
+/* CACHE des trucs pas intéressants */ 
+.post .field-image-de-profil .label,.post .field-balise-de-dialogue .label,.post .field-pseudo .label,.post .field-pronoms-irl .label,.post .field-activite-rpgique .label,.post .field-aesthetic-humain .label,.post .field-aesthetic-espece .label,.post .field-image-humain .label,.post .field-image-espece .label{
+	display:none;
+}
+
+.user_field.field-pseudo { /* Pseudo du joueur */
+		font-family: var(--font-title);
+		text-align: center;
+		font-size: var(--medium-size);
+}
+
+.user_field.field-pronoms-irl { /* Pronoms */
+		font-style: italic;
+		text-align: center;
+		margin: -5px 0 10px 0;
+		font-size: var(--normal-size);
+}
+
+.field-activite-rpgique { /* Activité RPGique et gestion de la couleur */
+	text-align: center;
+	border-top: var(--border);
+	margin: 10px;
+}
+
+.field-activite-rpgique::before, .profile_activityTag .field_uneditable::before {
+	content: "● ";
+	font-size: 16px;
+}
+
+.RPG-Absent::before { color: var(--icone-rouge); }
+.RPG-Ouvert::before { color: var(--icone-verte); }
+.RPG-Ferme::before { color: var(--icone-orange); }
+
+
+.surtour_balise { /* Balise de dialogue - Pourtour*/
+	width: fit-content;
+	min-width: 100px;
+	margin: -20px auto 0 auto;
+	border: solid 1px var(--neutralLighter);
+	padding: 5px;
+	border-radius: 20px;
+	position: relative;
+}
+
+.balise_joueur { /* Balise de dialogue - Base */
+	font-style: normal;
+	display: flex;
+	align-items: center;
+	padding: 5px 10px;
+	cursor: pointer;
+	background: var(--neutralDarker);
+}
+
+.balise_couleur { /* Balise de dialogue - Couleur */
+		background: white;
+		width: 15px;
+		height: 15px;
+		border-radius: 8px;
+		margin: 0 5px 0 0;
+}
+
+.profile_tooltip { /* Indicatif de copiage */
+	width: 100%;
+	margin: auto;
+	color: var(--textColorAccent);
+	display: none;
+	position: relative;
+	text-align: center;
+}
+
+/* === POST - Systeme de TAB pour les informations personnage === */ 
+
+.topic_tabs input[type="radio"] { /* On cache les radios buttons */
+		display: none;
+}
+
+/* Style the content sections */
+.tab-content_specie, .tab-content_chara { /* Les boites principales d'information */
+		display: none;
+		padding: 1rem;
+		flex-grow: 1;
+		width: 100%;
+}
+
+/* Display content when a tab is selected */
+.tab-index_specie:checked~.tab-content_specie,
+.tab-index_chara:checked~.tab-content_chara {
+		display: block;
+		min-height: 200px;
+}
+
+.topic_tabs label { /* Onglets pour naviger entre les différentes sections */
+	padding: 5px 7px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 3px 3px 0 0;
+	order: initial;
+	transition: color ease 0.3s;
+	color: var(--neutralLight);
+	display: inline-block;
+	background: var(--neutralDarker);
+	width: calc(50% - 16px);
+}
+
+.topic_tabs { /* Onglets  */
+	display: flex;
+	margin: 10px auto 0 auto;
+	flex-wrap: wrap;
+	width: 210px;
+	gap: 0 10px;
+	justify-content: center;}
+
+
+.tab-content_specie, .tab-content_chara { /* Boite d'information */
+	padding : 10px 5px;
+	font-size: var(--little-size);
+	max-height: 250px;
+	overflow: auto;
+	background: var(--neutralDark);
+	border-top: solid 1px var(--accentSecDark);
+	border-bottom: solid 1px var(--accentSecDark);
+}
+
+.topic_tabs img { /* On redimensionne les images pour pas qu'elles soient trop grandes */
+	max-width:180px;
+	border-radius: 8px;
+}
+.user_field.field-image-espece, .user_field.field-image-humain { 
+	img { margin: 10px 0; }
+}
+
+.topic_tabs input:checked+label {
+	background: var(--neutralDarker);
+}
+
+.user_field .label { /* Mise en page des labels */
+	color: var(--accentClr);
+	font-size: var(--normal-size);
+	font-family: var(--font-title);
+	padding: 0 5px 0 0;
+}
+
+.post_tw { /* Contenant pour les TW */
+	font-size: var(--little-size);
+	margin: 5px;
+}
+
+/* Réccompenses */ /* DEPREC */
+#list_awards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+/* 1 récompense */ /* DEPREC */
+.award {
+	width: 40px;
+	height: 40px;
+	position: relative;
+	background-image: var(--award-image);
+	background-size: cover;
+	background-position: center;
+	border-radius: 100%;
+}
+
+/* Bloc description de la récompenses */ /* DEPREC */
+.award_tooltiptext {
+	width: max-content;
+	display: none;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	background-color: var(--neutralDarker);
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+/* Affiche la description au hover de la récompense */ /* DEPREC */
+.award:hover .award_tooltiptext {
+	display: block;
+}
+
+.post_contact { /* Liens de contact (mp, fiche, liens, ...) */
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	a{
+		background: var(--neutralDarker);
+		padding: 5px 10px;
+		border-radius: 3px;
+		align-content: center;
+		color: var(--accentSec);
+		&:hover {
+			color: var(--accentClrDark);
+		}
+	}
+}
+
+/* === POST - Message === */
+.post_message { 
+		padding: 45px 25px 25px 25px; 
+}
+
+
+/* === REPONSE RAPIDE === */
+/*supression de la mention "réponse rapide" */
+.quickreply div.h3,
+.quickreply br {
+	display: none;
+}
+
+.quickreply div:has(input) { /* On ajoute un separateur entre les boutons et le textarea */
+    border-top: solid 1px var(--accentClrDark);
+    padding: 10px 0 0 0;
+}
+
+.panel-content button { 
+	&:hover {
+		letter-spacing: 0;
+	}
+}
+
+.insidePost a:last-of-type { /* Ajustement des trucs de surveillance des sujets */
+	font-family: var(--font);
+	font-size: 12px;
+  color: var(--textColorAccent);
+}
+
+
+/* ============= PART IX : Editeur de texte  ============= */ 
+
+#preview.post_row { /* C'est pour la preview des messages dans l'editeur */
+	background: var(--neutralDark);
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 2px 2px 4px var(--shadow);
+
+	.post_message {
+		border-radius: 0;
+		background: var(--neutral);
+	}
+
+	.post_pseudo {
+	  padding: 0 15px;
+	  margin: 10px 0;
+	  display: inline-block;
+	  font-size: 18px;
+	  font-family: var(--font-title);
+	}
+}
+/* Editeur */
+.sceditor-container {
+	border: var(--border) !important;
+	background-color: var(--neutral) !important;
+}
+
+/* Barre d'outils de l'éditeur de texte*/
+div.sceditor-toolbar {
+	background: var(--neutral) !important;
+	border-bottom: none !important;
+	padding: 10px 10px 0 !important;
+}
+
+/* Conteneur des groupes d'outils */
+div.sceditor-group {
+	background: var(--neutralDark) !important;
+	border-bottom: none !important;
+	padding: 5px !important;
+
+	&:empty {
+		display: none;
+	}
+}
+
+/* Bouton d'un outil */
+a.sceditor-button {
+	font-size: 16px;
+	height: 21px !important;
+	width: 21px !important;
+	text-indent: 0 !important;
+	padding: 0 !important;
+	display: grid;
+	place-items: center;
+}
+
+/* Bouton d'un outil au survol ou actif*/
+.sceditor-button.active,
+.sceditor-button:hover,
+.sceditor-button.hover {
+	background: transparent !important;
+	box-shadow: none !important;
+	border: none !important;
+	color: var(--accentClr);
+}
+
+.sceditor-dropdown {
+	background: var(--neutral) !important;
+	border: 1px solid var(--accentClr) !important;
+	border-radius: 5px !important;
+	color: var(--textColor) !important;
+	box-shadow: none !important;
+
+	& label {
+		color: var(--textColor) !important;
+	}
+
+	& input,
+	& textarea {
+		border: none !important;
+		border-radius: 5px !important;
+		padding: 5px 10px !important;
+	}
+
+	& .button {
+		background-color: var(--accentClr) !important;
+		color: var(--neutralDark) !important;
+		border: none !important;
+	}
+}
+
+/* Conteneur de la zone de texte */
+.sceditor-container iframe,
+.sceditor-container textarea {
+	background-color: var(--neutral) !important;
+	/*ne pas supprimer*/
+	width: 100% !important;
+	margin: 0 !important;
+	padding: 10px !important;
+	/*ne pas supprimer*/
+	min-height: 250px !important;
+}
+
+.sceditor-container textarea:focus {
+	outline: none !important
+}
