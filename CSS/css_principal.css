@@ -218,8 +218,8 @@
 				margin: 0 0 -15px 0;
 				span {
 					background: var(--gradient);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
 				}
 	}
 	.timeline { /* Info de lieu et de date du forum */
@@ -1913,4 +1913,58 @@ a.sceditor-button {
 
 .sceditor-container textarea:focus {
 	outline: none !important
+}
+
+/* ============= PART X : Page de connexion  ============= */ 
+/* Va de paire avec le JS 26 qui ajoute un container en JS sur la page */
+
+#page-body:has(.login-tabbed) { /* CSS qui n'agit que sur la page de connexion */
+
+	.panel.login-tabbed {
+		width: 600px;
+		margin: 20px 10px;
+
+	}
+	.container {
+	  display: flex;
+	  padding: 45px 10px;
+	}
+
+	.theme-toggle { display: none; }
+
+	.login-tabs {
+		border-bottom: solid 1px var(--accentClr);
+	}
+
+	.h3 {
+		text-align: center;
+		font-family: var(--font-var);
+		font-size: 25px;
+		background: var(--gradientSec);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.panel:not(.login-tabbed) {
+		width: 269px;
+	}
+
+	#page-footer {
+	  width: 900px;
+	}
+
+	.login-tabs {
+		text-align: center;
+		button {
+		background: none;
+		font-family: var(--font-accent);
+		text-transform: uppercase;
+		font-size: 13px;
+			i {
+				font-size: 20px;
+				margin: 0 10px;
+				color: var(--accentSec);
+			}
+		}
+	}
 }
