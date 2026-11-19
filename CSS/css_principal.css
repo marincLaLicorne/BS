@@ -14,6 +14,8 @@
 /* X. Page de connexion */
 /* XI. Messagerie privée */
 /* XII. Profils (Wombat et general) */
+/* XIII. Edition du profil */
+/* XIV. Listing des membres */
 
 /* ============= PART I : Elements qui peuvent être appelé tel quel dans le code ============= */ 
 
@@ -51,6 +53,11 @@
 			linear-gradient(90deg,#000 2px,#0000 0) -1px 50% /100% calc(100% - 90px + 1px) repeat-x,
 			linear-gradient(#000 2px,#0000 0) 50% -1px/calc(100% - 90px + 1px) 100% repeat-y;
 	}
+}
+
+
+.toHide { /* Utilitaire de cache */
+	display: none;
 }
 
 /* ============= PART II : NAVIGATION ============= */ 
@@ -2109,7 +2116,7 @@ a.sceditor-button {
 
 
 /* ============= PART XIII : Affichage du profil (Wombat)  ============= */ 
-/* ··· PROFIL ··· */
+/* === PROFIL === */
 .user_profile {
 	background: var(--neutral);
 	border-radius: 5px;
@@ -2135,7 +2142,7 @@ a.sceditor-button {
 	grid-gap: none;
 }
 
-/* ··· APERCU DU PROFIL (WOMBAT) ··· */
+/* === APERCU DU PROFIL (WOMBAT) === */
 
 /* Fond atténué */
 .wombat-overlay {
@@ -2445,7 +2452,7 @@ a.sceditor-button {
 	margin: 20px;
 }
 
-/* TABS SYSTEM */ 
+/* == TABS SYSTEM == */ 
 /* PROFILE */
 /* Hide the radio inputs */
 .profile_tabs input[type="radio"] {
@@ -2477,7 +2484,7 @@ a.sceditor-button {
   background: var(--neutralDarker);
 }
 
-/* ONGLETS SUJET */
+/* = ONGLETS SUJET = */
 .profileTab-content_specie, .profileTab-content_chara, .profileTab-content_irl {
   padding: 7px 10px;
   font-size: var(--little-size);
@@ -2516,3 +2523,301 @@ a.sceditor-button {
 	text-align: center;
 	margin: 20px 0;
 }
+
+/* ==== Bulle de profil (au survol d'un tag de nom ) ==== */
+.tooltipster-default { /* Apparence de la bulle */
+	background-color: var(--neutralDark) !important;
+	color: var(--textColor) !important;
+	width: 400px!important;
+	max-width: 400px!important;
+	min-width: 400px!important;
+}
+
+.tooltipster-arrow span { /* Flèche de la bulle */
+	border-color: var(--neutralDark) !important;
+}
+
+.preview_content { /* Conteneur de la prévisualisation */
+	display: flex;
+	gap: 15px
+}
+
+.preview_avatar { /* Avatar */
+	--size: 60px;
+	width: var(--size);
+	height: var(--size);
+	aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+	border-radius: 5px;
+	border: solid 1px var(--accentClr);
+}
+
+.preview_infos { /* Conteneur des informations : pseudo, rang et liens */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 5px 0;
+	font-family: var(--font-accent);
+	font-style: italic;
+}
+
+.preview_pseudo {
+	font-size: var(--medium-size);
+	font-family: var(--font-accent);
+}
+
+.preview_contacts { /* Conteneur des liens (mp, sujets, ...) */
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+/* ============= PART XIII : Edition du profil ============= */ 
+
+#tabs { /* Barre d'onglets */
+	margin: 0;
+}
+
+#tabs ul {
+	display: flex;
+	justify-content: right;
+	flex-wrap: wrap;
+	gap: 0 10px;
+	margin: 20px 0 10px;
+}
+
+#tabs li { /* Onglets  */
+	display: block;
+	width: fit-content;
+	font-size: 16px;
+	font-family: var(--font-title);
+	margin: 6px 0;
+	cursor: pointer;
+	padding: 3px 16px;
+	background: var(--neutralDarker);
+	a {
+		color: var(--accentSec);
+		&:hover {
+			color: var(--accentClr);
+		}
+	}
+
+	/* Onglet sélectionné */
+	&.activetab {
+		background: var(--neutralDark);
+		border-radius: 8px 8px 0 0;
+	}
+}
+
+/* Supprime l'onglet "amis et ignorés" */
+#tabs li:has(a[href="/profile?mode=editprofile&page_profil=friendsfoes"]) {
+	display: none;
+}
+
+/* === FIELDS === */
+.fieldPref label, .pref_row label {
+	display: flex;
+	margin: 10px;
+	font-family: var(--font-accent);
+	font-weight: normal;
+}
+
+.fieldPrefLabel {
+	width: auto;
+	align-self: center;
+	margin: 0 10px 0 0;
+}
+
+.fieldPrefInput {
+	flex: 1;
+	padding-right: 20px; 
+}
+
+.fieldPref input, .pref_row input {
+	width : 100%!important;
+}
+.fieldPref textarea {
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+	margin: 5px 10px;
+}
+.fieldPref span.italic {
+	font-size: var(--little-size);
+	display: block;
+	margin: 0 40px;
+	text-align: right;
+}
+
+#field-profile-image-de-profil, #field-profile-image-humain, #field-profile-image-espece { 
+	.fieldPrefLabel {
+		align-self: auto;
+		margin-right: 5px; }
+}
+
+#field-profile-image-de-profil, #field-profile-image-humain, #field-profile-image-espece {
+	input { margin: 5px; }
+}
+
+
+#field-profile-aesthetic-humain, #field-profile-age-humain, #field-profile-coeur-et-raison-d-etre, #field-profile-dans-la-vie, #field-profile-aesthetic-espece, #field-profile-age-espece, #field-profile-organisation {
+	&.fieldPref label {
+		display: block;
+	}
+} 
+
+h1.page-title.pagePref { /* Ajustement des H1 */
+	margin: 10px 45px 10px 0;;
+}
+
+/* === Sous-pages d'edition supplementaires === */
+/* Notification, sujets surveillés ... */
+
+.panel:has(form[name='notif_opts']), .panel:has(#cp-main), form[name="searchform"] {
+	position: relative;
+	padding-bottom: 40px;
+	background: var(--glass);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+	mask: radial-gradient(45px at 45px 45px,#0000 90%,#000) -45px -45px; 
+	&:before { 
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: var(--gradient);
+		mask:
+			radial-gradient(45px at 45px 45px,#0000 calc(98% - 1px),#000 calc(100% - 1px) 98%,#0000) -45px -45px,
+			linear-gradient(90deg,#000 2px,#0000 0) -1px 50% /100% calc(100% - 90px + 1px) repeat-x,
+			linear-gradient(#000 2px,#0000 0) 50% -1px/calc(100% - 90px + 1px) 100% repeat-y;
+	}
+
+	&> * {
+		position: relative;
+	}
+	.panel {
+		box-shadow: 2px 2px 4px var(--shadow);
+	}
+	th, h2.h3 { 
+		font-family: var(--font-title);
+		background: var(--gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight:  400;
+	}
+
+	.mobile-visible { display:none } /* FA bug et sait pas afficher le mobile visible and hidden ?! */
+
+}
+
+/* ============= PART XIV : Listing des membres ============= */ 
+/* --- Template : memberlist_body ----------------- */
+/* === Partie de filtre === */
+.container.memberList {
+	position: relative;
+	margin: 60px 0 20px 0;
+	padding: 0 10px 45px 10px;
+}
+
+.member-title {
+  padding: 1px 20px 0px 0;
+  border-bottom: solid 1px var(--accentClr);
+}
+
+.filtres {
+	padding: 10px 25px;
+	background: var(--neutral);
+	margin: 10px 30px 20px 30px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 4px var(--shadow);
+
+	summary {
+		font-size: var(--medium-size);
+	}
+	.button {
+		margin: 4px 5px; 
+		&.is-checked {
+			background: var(--accentClr);
+			color: var(--neutralDark);
+		}
+	}
+	h3 {
+		font-family: var(--font-title); 
+		font-weight: normal;
+		font-size: var(--medium-size);
+		margin: 5px 0;
+		background: var(--gradientSec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	}
+	h2 {
+		display: inline-block;
+		font-size: var(--title-size);
+		font-weight: normal;
+		font-family: var(--font-title);
+	}
+
+	h1 {
+		margin: 10px 45px 10px 0;
+	}
+}
+
+.ui-group, .sorts, .croiss {
+	background: var(--neutralDark);
+	padding: 10px;
+	border-radius: 5px;
+	margin: 5px 0;
+}
+
+/* === Mini-boites === */
+.userlist_profil { 
+	padding: 10px;
+	background: var(--neutral);
+	border-radius: 5px;
+	width: 32%;
+	margin: 5px;
+	height: 180px;
+	box-shadow: 2px 2px 4px var(--shadow);
+}
+
+.userlist_avatar img {
+	width: 75px;
+	/* garde les proportions de l'avatar */
+	aspect-ratio: 5 / 8;
+	border-radius: 3px;
+	border: solid 1px var(--accentClr);
+}
+
+/* Conteneur des informations du membre : pseudo, rang et liens */
+.userlist_infos {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.userlist_pseudo {
+	font-size: var(--medium-size);
+	span {
+		color: var(--neutralDarker) !important;
+	}
+	strong {
+		font-weight: normal;
+	}
+}
+
+.userlist_infos label,.userlist_infos .label {
+	display: inline-block;
+	font-weight: normal;
+	font-family: var(--font-title);
+	color: var(--textColorLabel);
+	margin: 0 3px 0 0;
+}
+
+.userlist_name {
+	background: var(--neutralDark);
+	padding: 5px 10px;
+	border-radius: 3px;
+	margin: 0 0 5px 0;
+}
+
