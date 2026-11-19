@@ -11,6 +11,9 @@
 /* VII. Listing des sujets */
 /* VIII. Affichage d'un sujet */
 /* IX. Editeur de texte */
+/* X. Page de connexion */
+/* XI. Messagerie privée */
+/* XII. Profils (Wombat et general) */
 
 /* ============= PART I : Elements qui peuvent être appelé tel quel dans le code ============= */ 
 
@@ -1967,4 +1970,549 @@ a.sceditor-button {
 			}
 		}
 	}
+}
+
+/* ============= PART XII : Messagerie privée  ============= */ 
+.privmsgs_menu { /* Menu avec les boutons en haut, pour navigué entre envoi et archive */
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin: 20px auto;
+}
+
+.privmsgs_menu li { /* Les boutons du menu */
+	background-color: var(--neutralDarker);
+	border-radius: 5px;
+	padding: 7px 10px;
+	font-family: var(--font-title);
+	font-size:18px;
+	span {
+		background: var(--gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent; 
+
+	}
+	a {
+		background: var(--gradientSec);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		&:hover {
+			background: var(--gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent; 
+			text-shadow: 0 0 5px var(--accentClrOpa);
+		}
+	}
+}
+
+.mp_row { /* Ligne d'un MP dans la liste */
+	background: transparent;
+	border-radius: 0;
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 5px;
+	align-items: center;
+	margin: 10px 0;
+	padding: 10px;
+	height: 70px;
+}
+
+.mp_indic { /* Statut : nouveau, lu ... */
+  background: var(--neutralDark);
+  width: 10px;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 2px 2px 4px var(--shadow);
+  img {
+  	display: none;
+  }
+}
+
+.mp_indic:has(.img-new) { background: var(--accentSec); } 
+
+.mp_infos { /* Esthetique interne du titre, des liens ...  */
+  background: var(--neutralDark);
+  height: 100%;
+  align-content: center;
+  padding: 0 15px;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 2px 2px 4px var(--shadow);
+  input {
+  	margin: -20px 0 0 0;
+  }
+
+  a.topictitle {
+  	font-family: var(--font-var);
+  } 
+}
+
+.u-space-between a {
+	font-family: var(--font-title);
+}
+
+/* === Ouverture d'un message === */
+.message {
+	background: var(--neutral);
+	border-radius: 5px;
+	display: grid;
+	grid-template-rows: max-content auto;
+	grid-template-columns: max-content 1fr;
+	&:last-of-type {
+		margin-bottom: 45px;
+	}
+}
+
+.message_infos { /* Conteneur des informations du message : expéditeur, date, ... */
+	grid-column: 1 / span 2;
+	border-bottom: 1px solid var(--neutralDark);
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.message_profil { /* Conteneur de l'avatar de l'expéditeur */
+	padding: 10px;
+	border-right: 1px solid var(--neutralDark);
+	text-align: center;
+}
+
+.message_content { /* Conteneur du contenu du message */
+	padding: 25px;
+}
+
+#find_username { /* Recherche d'utilisateur lors de l'ouverture d'un MP */
+	display: none;
+	position: fixed;
+	inset: 0;
+	margin: auto;
+	width: max-content;
+	height: max-content;
+	background-color: var(--neutral);
+	padding: 10px;
+	border: 1px solid var(--accentClr);
+	border-radius: 10px;
+
+	h1 {
+		font-size: var(--medium-size);
+		margin: 10px 0;
+	}
+
+	.panel {
+		background-color: transparent;
+
+	}
+}
+
+.curr_privmsg:last-of-type { /* Historique des messages */
+	margin-bottom: 45px;
+}
+
+
+/* ============= PART XIII : Affichage du profil (Wombat)  ============= */ 
+/* ··· PROFIL ··· */
+.user_profile {
+	background: var(--neutral);
+	border-radius: 5px;
+	display: grid;
+	grid-template-columns: max-content auto;
+	padding: 10px;
+	grid-gap: 20px;
+	margin-bottom: 10px;
+}
+
+
+/* Conteneur des champs de profil */
+.profile_content {
+	height: 265px;
+	overflow: auto;
+}
+
+/* Champs de profil */
+.profile_field {
+	margin: 0;
+	display: block;
+	grid-template-columns: none;
+	grid-gap: none;
+}
+
+/* ··· APERCU DU PROFIL (WOMBAT) ··· */
+
+/* Fond atténué */
+.wombat-overlay {
+	position: fixed;
+	z-index: 990;
+	inset: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.2s opacity ease;
+	background: var(--neutral);
+}
+
+/* effet de transition du fond atténué */
+.wombat-overlay.open {
+	opacity: 0.5;
+	visibility: visible;
+}
+
+/* Fenêtre du popup */
+.wombat-aside {
+	position: fixed;
+	inset: 0;
+	margin: auto;
+	z-index: 999;
+	transition: 0.2s all ease;
+	visibility: hidden;
+	opacity: 0;
+	width: 90%;
+	max-width: 800px;
+	height: max-content;
+	transform: translateX(-20%);
+}
+
+/* effet de transition pour la fenêtre */
+.wombat-aside.open {
+	opacity: 1;
+	transform: translateX(0);
+	visibility: visible;
+}
+
+#wombat .flex, .profile_mainBlock {
+	display: flex;
+}
+
+#wombat {
+	.profile_top { /* Partie du profil avec le pseudo et le rang */
+	  display: flex;
+	  align-content: center;
+	  align-items: center;
+	  height: 50px;
+	  margin: 5px 0;
+	  padding: 0 60px;
+
+	  h3 {
+	    font-family: var(--font-var);
+	    font-weight: 400;
+	    font-size: 36px;
+	    margin: 0 20px 0 0;
+	    background: transparent;
+	    -webkit-text-fill-color: inherit;
+		}
+
+		strong {
+	    font-weight: 400;
+		}
+
+		.profile_rank {
+	    font-style: italic;
+	    color: var(--textColorAccent);
+	    margin: 10px 0 0 0;
+		}
+	}
+
+  .profile_left {
+    position: relative;
+    background: var(--neutralDark);
+    border-right: solid 1px var(--accentClrDark);
+    .profile_tooltip {
+			position: absolute;
+			top: 15px;
+			left: 148px;
+		}
+  }
+
+  .profile_avatar {
+  	text-align: center;
+		position: relative;
+    img {
+        border-radius: 0;
+        margin: 0 auto;
+    }
+	}
+
+	#dialogueColor {
+    width: -webkit-fill-available;
+    margin: 0;
+    background: var(--neutralDarker);
+    padding: 5px 10px;
+    border-radius: 14px;
+    display: flex;
+    cursor: pointer;
+    .balise_couleur {
+			margin: 0 10px 0 0;
+		}
+	}
+
+	.profile_contact {
+    display: block;
+    gap: 5px;
+    float: none;
+    column-count: 2;
+    text-align: center;
+    margin: 10px;
+    a {
+      background: var(--neutralDarker);
+      padding: 5px 10px;
+      border-radius: 3px;
+      margin: 0;
+      display: inline-block;
+      width: 85px;
+      color: var(--accentClr);
+      &:hover {
+      	color: var(--accentSec);
+      	text-shadow: 0 0 4px var(--accentClrOpa);
+      }
+    }
+	}
+
+	.profile_main {
+    width: -webkit-fill-available;
+    height: 420px;
+    overflow: hidden;
+    margin: 0;
+    background: transparent;
+    border-radius: 0 5px 5px 0;
+	}
+
+	.moderate_links {
+		height: 45px;
+		align-content: center;
+	}
+
+	#info_hrp {
+    display: flex;
+    background: var(--neutralDark);
+    height: 50px;
+    align-items: center;
+    border-bottom: solid 1px var(--accentSec);
+    overflow: hidden;
+	}
+
+	#profile_img {
+    width: 50px;
+    height: 50px;
+    background: var(--neutral);
+    img {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	.profile_infoHrp {
+	    display: flex;
+	    align-items: center;
+	    width: 60%;
+	    justify-content: right;
+	    padding: 0 0 0 20px;
+	}
+
+	#profile_pseudo {
+    margin: 10px;
+    line-height: 20px;
+    text-transform: none;
+	}
+
+	#profile_pronoums {
+    font-style: italic;
+    font-family: var(--font-var);
+    margin: 3px 10px 0 0;
+    color: var(--neutralLighter);
+	}
+
+	.button {
+		width: 90%;
+		margin: 3px auto;
+		text-align: center;
+		display: block;
+		border-radius: 3px;
+	}
+	.profile_pres {
+		display:none; /* TEMP ? */
+		width: 20px;
+		height: 20px;
+		color: var(--icone-rouge);
+		background: var(--icone-rouge);
+		overflow: hidden;
+		border-radius: 10px;
+		position: absolute;
+		bottom: -5px;
+		right: 5px;
+		display: visible!important;
+
+		&.online {
+			color: var(--icone-verte);
+			background: var(--icone-verte);
+		}
+	}
+
+
+	#info_hrp, #dialogueColor, #field_id8, #field_id12, #field_id14, #field_id17 {
+	 label { display: none; }
+	}
+
+} 
+
+.profile_stats {
+	padding: 5px;
+}
+
+
+#profile_activity {
+	width: 40%;
+	margin: 0 20px;
+	font-size: var(--little-size);
+}
+
+.profile_activityTag {
+	background: var(--neutralDarker);
+	border-radius: 8px;
+	width: 140px;
+	padding: 5px 10px;
+	font-size: var(--normal-size);
+}
+
+.profile_character {
+  width: 60%;
+  overflow: auto;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px var(--shadow);
+}
+
+.profile_otherInfo {
+	width: 37%;
+	padding: 10px 10px 10px 0;
+
+	label {
+		font-family: var(--font-accent);
+		font-weight: normal;
+		font-size: var(--normal-size);
+		color: var(--textColorLabel);
+	}
+}
+
+#profile_tw, #profile_credits {
+	border-radius: 10px;
+	background: var(--neutralDark);
+	box-shadow: 2px 2px 4px var(--shadow);
+	margin: 10px 0;
+	padding: 5px 10px;
+	overflow: auto;
+	font-size: var(--little-size);
+}
+
+#profile_tw { height: 230px; margin-top:0; }
+#profile_credits { height: fit-content; }
+.profile_misc {
+	height: 170px;
+	overflow: auto;
+}
+
+.profile_contactLink {
+	width: 100%;
+	margin: 5px 0 10px 0;
+}
+
+.profile_mainBlock {
+	display: flex;
+	height: 370px;
+}
+
+
+.profile_tabs {
+	border-radius: 10px;
+	margin:0;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	overflow: hidden;
+}
+
+
+
+#wombat h3 {
+	font-family: var(--font-var);
+	font-weight: normal;
+	font-size: var(--medium-size);
+	margin: 10px 0 0 0;
+}
+.profile_name {
+	text-align: center;
+	line-height: 13px;
+	font-style: italic;
+	margin: 20px;
+}
+
+/* TABS SYSTEM */ 
+/* PROFILE */
+/* Hide the radio inputs */
+.profile_tabs input[type="radio"] {
+		display: none;
+}
+
+
+/* Style the content sections */
+.profileTab-content_specie, .profileTab-content_chara, .profileTab-content_irl {
+		display: none;
+}
+
+/* Display content when a tab is selected */
+.profileTab-index_specie:checked~.profileTab-content_specie,
+.profileTab-index_chara:checked~.profileTab-content_chara,
+.profileTab-index_irl:checked~.profileTab-content_irl {
+		display: block;
+}
+
+.profile_tabs label {
+  padding: 0 7px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0;
+  color: var(--neutral);
+  font-size: var(--large-size);
+  margin: 0 -10px 0 0;
+  align-content: center;
+  background: var(--neutralDarker);
+}
+
+/* ONGLETS SUJET */
+.profileTab-content_specie, .profileTab-content_chara, .profileTab-content_irl {
+  padding: 7px 10px;
+  font-size: var(--little-size);
+  height: 100%;
+  overflow: auto;
+  background: var(--neutralDark);
+  border-left: solid 1px var(--accentClr);
+
+	label {
+		font-family: var(--font-var);
+		font-weight: normal;
+		font-size: 15px;
+		background: transparent;
+		color: var(--accentClr);
+	}
+
+}
+
+.profile_tabs img {
+	max-width:200px;
+	border-radius: 8px;
+}
+
+.profile_tabs input:checked+label {
+	background: var(--neutralDarker);
+}
+
+.profile_tabs #labelChara { grid-area: 1 / 1 / 2 / 2; }
+.profile_tabs #labelSpecie { grid-area: 2 / 1 / 3 / 2; }
+.profile_tabs #labelIrl { grid-area: 3 / 1 / 4 / 2; }
+#contentChara, #contentSpecie, #contentIrl { grid-area: 1 / 2 / 4 / 8; }
+
+
+/* IMAGE DU PROFIL A CENTRER */
+#field_id17, #field_id12 {
+	text-align: center;
+	margin: 20px 0;
 }
