@@ -49,9 +49,8 @@
 .guide_main {
 	background: var(--neutralDark);
 	margin: 10px 25px;
-	border-radius: 90px 5px 5px 5px;
+	border-radius: 5px;
 	overflow: clip;
-	padding: 10px;
 	text-align: justify;
 
 	img {
@@ -60,10 +59,11 @@
 	}
 
 	details{
-		background: var(--neutral);
 		margin: 0 20px;
-		border-radius: 5px;
 		padding: 10px 20px;
+		border-bottom: solid 1px var(--accentSecDark);
+        border-top: solid 1px var(--accentSecDark);
+
 		summary {
 			margin: 0 0 0 -10px;
 			color: var(--accentClrDark);
@@ -73,23 +73,23 @@
 	}
 }
 .guide_content:nth-last-child(4) { /* Cible le dernier content */ 
-	margin: 20px 15px 0 15px; 
+	margin: 20px 20px 0 20px; 
 }
 
 .guide_top {
 	position: relative;
 	height: 170px;
 	padding: 0 30px 0 0;
+	background: var(--neutralDarker);
+    border-bottom: solid 1px var(--accentClrDark);
+    overflow: hidden;
 
 	.guide_img {
 		float: left;
 		img {
-			border-radius: 50%;
-			width: 150px;
-			height: 150px;
-			border: solid 3px var(--accentClr);
-			padding: 8px;
-			margin: 0 15px;
+			width: 170px;
+			height: 170px;
+			border-right: solid 1px var(--accentClr);
 		}
 	}  
 
@@ -131,7 +131,7 @@
 }
 
 .guide_content {
-	margin: 20px 15px 30px 15px;
+	margin: 20px 20px 30px 20px;
 	background: var(--neutral);
 	border-radius: 5px;
 	padding: 5px 15px 10px 15px;
@@ -143,11 +143,14 @@
 		font-size: var(--large-size);
 		color: var(--accentSec);
 		position: absolute;
-		background: var(--neutral);
+		background: var(--neutralDarker);
 		top: -25px;
+		right: 0;
 		padding: 5px 20px;
 		border-radius: 5px 5px 0 0;
-		right: 20px;
+		width: 100%;
+		border-bottom: solid 1px var(--accentClrDark);
+        text-align: right;
 	}
 
 	
@@ -155,8 +158,7 @@
 
 .guide_encart {
 	padding: 10px 20px;
-	border: solid 1px var(--accentSecDark);
-	border-radius: 5px;
+	border-left: solid 1px var(--accentSecDark);
 	margin: 10px 20px;
 
 	 img {
@@ -179,20 +181,15 @@
 	width: 230px;
 	height: 840px;
 	background: var(--neutralDark);
-	padding: 20px;
-	border-radius: 0;
 	position: sticky;
-	top: 75px;
-	margin: 0;
+	top: 60px;
 	text-align: center;
 
 	img {
-		border-radius: 65px;
-		width: 125px;
-		height: 125px;
-		padding: 10px;
-		border: solid 2px var(--accentClrDark);
-		margin: 15px;
+		width: 100%;
+		aspect-ratio: 1/1;
+		border-bottom: solid 1px var(--accentClrDark);
+		margin: 0 0 15px 0;
 	}
 
 }
@@ -1471,8 +1468,7 @@ txt:before {
 	margin: 10px;
 }
 
-
-/* ============= PART XI : DEBUG ============= */ 
+/* ============= PART XII : DEBUG ============= */ 
 
 .profil_editavatar dl:first-child {
   display: grid!important;
