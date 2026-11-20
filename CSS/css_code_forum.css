@@ -1153,14 +1153,15 @@ txt:before {
 }
 
 .prez_sectionB {
-	margin: 0 0 0 10px;
+	margin: 0;
 	height: 320px;
 	overflow: hidden;
-	width: 490px;
+	width: 515px;
 }
 
 .prez_sectionC {
 	display: flex;
+	margin: 10px;
 }
 
 .prez_infos {
@@ -1212,7 +1213,6 @@ txt:before {
 
 .prez_title {
 	background: var(--neutral);
-	border-radius: 5px;
 	padding: 10px 20px;
 	display: flex;
 	font-size: var(--large-size);
