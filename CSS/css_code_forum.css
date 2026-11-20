@@ -689,7 +689,7 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 .insta_descr span {
   font-size: var(--little-size);
   font-family: 'Open sans';
-  color: var(--textColorLabel);
+  color: var(--textColorAccent);
 }
 
 .insta_stats {
@@ -754,7 +754,7 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 
 .insta_time {
   font-size: var(--little-size);
-  color: var(--textColorLabel);
+  color: var(--textColorAccent);
 }
 
 .insta_comment .insta_imgProfile {
@@ -1118,7 +1118,7 @@ txt:before {
 
 
 .prez_tabs input:checked+label {
-	background: var(--neutralDark);
+	background: var(--neutralDarker);
 }
 
 /* Style the content sections */
@@ -1145,9 +1145,11 @@ txt:before {
 
 .prez_sectionA {
 	display: flex;
-	padding: 15px;
-  background: var(--neutralDark);
-  border-radius: 5px;
+	padding: 0;
+	background: var(--neutralDark);
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 0 10px 10px 5px;
 }
 
 .prez_sectionB {
@@ -1177,16 +1179,17 @@ txt:before {
 
 .prez_side {
 	width: -webkit-fill-available;
-	height: 270px;
+	height: 260px;
 	display: flex;
   flex-direction: column;
 }
 
 .prez_img {
 	overflow: hidden;
-	border-radius: 5px;
+	border-radius: 0px;
 	width: 200px;
 	height: 320px;
+	border-right: solid 1px var(--accentClr);
 
 	img { width: 200px; }
 }
@@ -1196,7 +1199,7 @@ txt:before {
 	background: var(--neutral);
 	padding: 10px;
 	border-radius: 5px;
-	height: 270px;
+	height: 260px;
 	div {
 		width: 100px;
 	height: 31%;
@@ -1214,9 +1217,12 @@ txt:before {
 	display: flex;
 	font-size: var(--large-size);
 	height: 40px;
-	font-family: var(--font-var);
+	font-family: var(--font-title);
 	align-items: center;
 	margin: 0 0 10px 0;
+	border-bottom: solid 1px var(--accentClr);
+  	background-color: var(--neutralDark);
+
 	.prez_pronoms {
 		font-family: var(--font-accent);
 		font-size: var(--normal-size);
