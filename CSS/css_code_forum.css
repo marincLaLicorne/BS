@@ -97,6 +97,7 @@
 		font-family: var(--font-accent);
 		color : var(--textColorAccent);
 		text-align: right;
+		margin: 10px 0 0 0;
 	}
 
 	.guide_title {
@@ -187,9 +188,10 @@
 
 	img {
 		width: 100%;
-		aspect-ratio: 1/1;
 		border-bottom: solid 1px var(--accentClrDark);
 		margin: 0 0 15px 0;
+		height: 130px; /* le format carré est trop grand pour les petits ecrans */
+    	object-fit: cover;
 	}
 
 }
