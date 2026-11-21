@@ -55,7 +55,6 @@
 
 	img {
 		max-width: 470px;
-		border-radius: 5px;
 	}
 
 	details{
@@ -312,7 +311,7 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 .simple_main {
 	background: var(--neutralDark);
 	margin: 10px 25px;
-	border-radius: 90px 5px 5px 5px;
+	border-radius: 5px;
 	overflow: clip;
 	padding: 10px;
 	text-align: justify;
@@ -391,18 +390,17 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 .bottin_card {
 	background: var(--neutralDark);
 	width: 190px;
-	padding: 15px;
 	border-radius: 5px;
 	margin: 5px;
 	text-align: center;
+	overflow: auto;
 }
 
 .bottin_img {
-	width: 160px;
-	height: 160px;
-	border-radius: 5px;
-	position: relative;
-	background-size: 100% auto;
+	width: 190px;
+  height: 190px;
+  position: relative;
+  background-size: 100% auto;
 }
 
 .bottin_tag {
@@ -423,38 +421,40 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 }
 
 .bottin_name {
-	font-family: var(--font-title);
-	background: var(--neutral);
-	padding: 5px 10px;
-	border-radius: 3px;
-	margin: 8px 0;
+  font-family: var(--font-title);
+  background: var(--neutralDarker);
+  padding: 10px;
+  margin: 0 0 8px 0;
+  border-bottom: solid 1px var(--accentSec);
+  line-height: 12px;
 
 	a {
-		color: var(--neutralDarker);
-		&:hover {
-			color: var(--neutralLighter);
-		}
+		color: var(--textColorAccent);
+		font-family: var(--font-title);
 	}
 
-	&.harpies { background:var(--harpies);}
-	&.dryades { background:var(--dryades);}
-	&.sirenes { background:var(--sirenes);}
+	&.harpies a { color: var(--harpies);}
+	&.dryades a { color: var(--dryades);}
+	&.sirenes a { color: var(--sirenes);}
 
-	&.lycans { background:var(--lycans);}
-	&.stryges { background:var(--stryges);}
-	&.vampires { background:var(--vampires);}
-	&.banshees { background:var(--banshees);}
-	&.spectres { background:var(--spectres);}
+	&.lycans a { color: var(--lycans);}
+	&.stryges a { color: var(--stryges);}
+	&.vampires a { color: var(--vampires);}
+	&.banshees a { color: var(--banshees);}
+	&.spectres a { color: var(--spectres);}
 
-	&.normies { background:var(--normies);}
-	&.spicy { background:var(--spicy);}
-	&.chasseurs { background:var(--chasseurs);}
+	&.normies a { color: var(--normies);}
+	&.spicy a { color: var(--spicy);}
+	&.chasseurs a { color: var(--chasseurs);}
+
+	a:hover {
+		color: var(--neutralLighter);
+	}
 
 }
 
 .bottin_info {
-	font-weight: bold;
-	font-family: var(--font-accent);
+	font-family: var(--font-var);
 	font-size: var(--little-size);
 	padding: 0 0 5px 0;
 	border-bottom: var(--border);
