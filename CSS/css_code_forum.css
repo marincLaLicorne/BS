@@ -61,13 +61,13 @@
 		margin: 0 20px;
 		padding: 10px 20px;
 		border-bottom: solid 1px var(--accentSecDark);
-        border-top: solid 1px var(--accentSecDark);
+				border-top: solid 1px var(--accentSecDark);
 
 		summary {
 			margin: 0 0 0 -10px;
 			color: var(--accentClrDark);
 			font-family: var(--font-title);
-            font-size: 16px;
+						font-size: 16px;
 		}
 	}
 }
@@ -80,8 +80,8 @@
 	height: 170px;
 	padding: 0 30px 0 0;
 	background: var(--neutralDarker);
-    border-bottom: solid 1px var(--accentClrDark);
-    overflow: hidden;
+		border-bottom: solid 1px var(--accentClrDark);
+		overflow: hidden;
 
 	.guide_img {
 		float: left;
@@ -150,7 +150,7 @@
 		border-radius: 5px 5px 0 0;
 		width: 100%;
 		border-bottom: solid 1px var(--accentClrDark);
-        text-align: right;
+				text-align: right;
 	}
 
 	
@@ -190,7 +190,7 @@
 		border-bottom: solid 1px var(--accentClrDark);
 		margin: 0 0 15px 0;
 		height: 130px; /* le format carré est trop grand pour les petits ecrans */
-    	object-fit: cover;
+			object-fit: cover;
 	}
 
 }
@@ -384,7 +384,7 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 auto;
-  width: 800px;
+	width: 800px;
 }
 
 .bottin_card {
@@ -398,9 +398,9 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 
 .bottin_img {
 	width: 190px;
-  height: 190px;
-  position: relative;
-  background-size: 100% auto;
+	height: 190px;
+	position: relative;
+	background-size: 100% auto;
 }
 
 .bottin_tag {
@@ -421,12 +421,12 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 }
 
 .bottin_name {
-  font-family: var(--font-title);
-  background: var(--neutralDarker);
-  padding: 10px;
-  margin: 0 0 8px 0;
-  border-bottom: solid 1px var(--accentSec);
-  line-height: 12px;
+	font-family: var(--font-title);
+	background: var(--neutralDarker);
+	padding: 10px;
+	margin: 0 0 8px 0;
+	border-bottom: solid 1px var(--accentSec);
+	line-height: 12px;
 
 	a {
 		color: var(--textColorAccent);
@@ -474,10 +474,12 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 /* SECOND CARDS */
 .pnj_card {
 	background: var(--neutralDark);
-	padding: 10px;
 	border-radius: 5px;
-	width: 604px;
-  margin: 0 auto;
+	width: 625px;
+	margin: 0 auto;
+	height: auto;
+	overflow: hidden;
+
 	tag {
 	margin: 0 5px;
 	}
@@ -486,19 +488,28 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 	display: flex;
 }
 
+.pnj_partA {
+	margin: 5px 10px;
+	height: 163px;
+}
+
 .pnj_main {
-	margin: 0 0 8px 0;
+	background: var(--neutralDark);
+	border-bottom: solid 1px var(--accentClr);
+}
+
+.pnj_main > div:first-child {
+		border-right: solid 1px var(--accentSec);
 }
 
 .pnj_sideInfo {
-	margin: 0 0 0 10px;
+	width: 100%;
 
 	.pnj_title {
 		display: flex;
-		background: var(--neutral);
-		background-size: 200%;
+		background: var(--neutralDarker);
 		padding: 8px 10px;
-		border-radius: 3px;
+		border-bottom: solid 1px var(--accentSec);
 	}
 
 	.pnj_name {
@@ -533,7 +544,7 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 		border-radius: 3px;
 		div {
 		overflow: auto;
-		height: 120px;
+		height: 100%;
 		}
 }
 
@@ -550,10 +561,8 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 }
 
 .pnj_info {
-	background: var(--neutral);
+	background: var(--neutralDark);
 	padding: 15px;
-	border-radius: 3px;
-	margin: 8px 0 0 0;
 }
 
 .pnj_author {
@@ -566,33 +575,33 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 /* ============= PART VII : Instagram  ============= */ 
 
 .insta_main {
-  width: 550px;
-  background: var(--neutralDark);
-  margin: 0 auto;
-  border-radius: 5px;
-  overflow: hidden;
-  padding: 25px 10px;
-  font-family: 'Open sans', sans-serif;
+	width: 550px;
+	background: var(--neutralDark);
+	margin: 0 auto;
+	border-radius: 5px;
+	overflow: hidden;
+	padding: 25px 10px;
+	font-family: 'Open sans', sans-serif;
 }
 
 .insta_profile, .insta_stats, .insta_stories, .insta_navig, .insta_fil, .insta_post, .insta_comment {
-  display: flex;
+	display: flex;
 }
 
 .insta_profile .insta_imgProfile {
-  border: 4px solid var(--neutralDarker);
-  width: 120px;
-  height: 120px;
-  margin: 0 20px;
-  overflow: hidden;
-  border-radius: 50%;
-  padding: 6px;
+	border: 4px solid var(--neutralDarker);
+	width: 120px;
+	height: 120px;
+	margin: 0 20px;
+	overflow: hidden;
+	border-radius: 50%;
+	padding: 6px;
 
 	div {
-	  width: 100px;
-	  height: 100px;
-	  background-size: auto 100%;
-	  border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		background-size: auto 100%;
+		border-radius: 50%;
 	}
 
 }
@@ -600,151 +609,151 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 
 
 .insta_stats div {
-  width: -webkit-fill-available;
-  text-align: center;
+	width: -webkit-fill-available;
+	text-align: center;
 }
 
 .insta_stats {
-  width: 95%;
+	width: 95%;
 }
 
 .insta_stories {
-  display: flex;
-  width: 500px;
-  margin: 15px auto;
+	display: flex;
+	width: 500px;
+	margin: 15px auto;
 }
 
 .insta_story {
-  text-align: center;
-  font-weight: 700;
-  font-size: var(--little-size);
+	text-align: center;
+	font-weight: 700;
+	font-size: var(--little-size);
 }
 
 .insta_imgStory {
-  border: 3px solid var(--neutralDarker);
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  overflow: hidden;
-  padding: 5px;
-  margin: 0 5px 5px 5px;
-  cursor: pointer;
+	border: 3px solid var(--neutralDarker);
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	overflow: hidden;
+	padding: 5px;
+	margin: 0 5px 5px 5px;
+	cursor: pointer;
 	div {
-	  width: 55px;
-	  height: 55px;
-	  border-radius: 50%;
-	  background-size: auto 100%;
+		width: 55px;
+		height: 55px;
+		border-radius: 50%;
+		background-size: auto 100%;
 	}
 }
 
 
 .insta_fil {
-  display: flex;
-  flex-wrap: wrap;
-  width: 480px;
-  margin: 0 auto 20px auto;
-  height: 480px;
-  overflow: auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 480px;
+	margin: 0 auto 20px auto;
+	height: 480px;
+	overflow: auto;
 
-  div {
-	  width: 146px;
-	  height: 146px;
-	  background-size: 100% auto;
-	  border-radius: 3px;
-	  margin: 5px;
+	div {
+		width: 146px;
+		height: 146px;
+		background-size: 100% auto;
+		border-radius: 3px;
+		margin: 5px;
 	}
 }
 
 .insta_navig {
-  width: 360px;
-  margin: 0 auto 5px auto;
-  gap: 120px;
+	width: 360px;
+	margin: 0 auto 5px auto;
+	gap: 120px;
 
 	div {
-	  width: -webkit-fill-available;
-	  text-align: center;
-	  font-size: 20px;
-	  color: var(--neutralLight);
-	  padding: 10px;
-	  cursor: pointer;
+		width: -webkit-fill-available;
+		text-align: center;
+		font-size: 20px;
+		color: var(--neutralLight);
+		padding: 10px;
+		cursor: pointer;
 
-	  &:is(:first-child) {
-		  color: var(--accentSec);
-		  border-bottom: 2px solid var(--accentSecDark);
+		&:is(:first-child) {
+			color: var(--accentSec);
+			border-bottom: 2px solid var(--accentSecDark);
 		}
 	}
 
 }
 
 .insta_pseudo {
-  font-size: var(--large-size);
-  font-weight: bold;
-  font-family: 'Open Sans', sans-serif;
-  i {
+	font-size: var(--large-size);
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	i {
 	color: var(--accentSec);
-  }
+	}
 }
 
 .insta_descr span {
-  font-size: var(--little-size);
-  font-family: 'Open sans';
-  color: var(--textColorAccent);
+	font-size: var(--little-size);
+	font-family: 'Open sans';
+	color: var(--textColorAccent);
 }
 
 .insta_stats {
-  margin: 10px 0;
+	margin: 10px 0;
 }
 
 .insta_infoProfile {
-  padding: 10px 0;
-  width: 365px;
+	padding: 10px 0;
+	width: 365px;
 }
 
 /*--- NOUVELLE PUBLI */
 .insta_post .insta_imgProfile {
-  border: 4px solid var(--neutralDarker);
-  width: 80px;
-  height: 80px;
-  margin: 0 20px;
-  overflow: hidden;
-  border-radius: 50%;
-  padding: 4px;
+	border: 4px solid var(--neutralDarker);
+	width: 80px;
+	height: 80px;
+	margin: 0 20px;
+	overflow: hidden;
+	border-radius: 50%;
+	padding: 4px;
 
 	div {
-	  width: 65px;
-	  height: 65px;
-	  background-size: auto 100%;
-	  border-radius: 50%;
+		width: 65px;
+		height: 65px;
+		background-size: auto 100%;
+		border-radius: 50%;
 	}
 
 }
 
 .insta_postImg {
-  width: 500px;
-  border-radius: 5px;
-  margin: 20px auto;
-  display: block;
+	width: 500px;
+	border-radius: 5px;
+	margin: 20px auto;
+	display: block;
 }
 
 .insta_postDesc span {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .insta_postDesc {
-  margin: 0 20px;
+	margin: 0 20px;
 }
 
 /* COMMENTARY AND CO */
 .insta_publiImg {
-  height: 80px;
-  border-radius: 3px;
-  margin: 0 10px;
+	height: 80px;
+	border-radius: 3px;
+	margin: 0 10px;
 }
 
 .insta_comment .insta_infoProfile {
-  width: 310px;
-  height: fit-content;
-  align-self: center;
+	width: 310px;
+	height: fit-content;
+	align-self: center;
 }
 
 .insta_comment .insta_pseudo {
@@ -752,87 +761,87 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 }
 
 .insta_time {
-  font-size: var(--little-size);
-  color: var(--textColorAccent);
+	font-size: var(--little-size);
+	color: var(--textColorAccent);
 }
 
 .insta_comment .insta_imgProfile {
-  border: 4px solid var(--neutralDarker);
-  width: 80px;
-  height: 80px;
-  margin: 0 20px;
-  overflow: hidden;
-  border-radius: 50%;
-  padding: 4px;
+	border: 4px solid var(--neutralDarker);
+	width: 80px;
+	height: 80px;
+	margin: 0 20px;
+	overflow: hidden;
+	border-radius: 50%;
+	padding: 4px;
 
 	div {
-	  width: 65px;
-	  height: 65px;
-	  background-size: auto 100%;
-	  border-radius: 50%;
+		width: 65px;
+		height: 65px;
+		background-size: auto 100%;
+		border-radius: 50%;
 	}
 
 }
 
 .insta_button {
-  width: 80px;
-  text-align: center;
-  height: fit-content;
-  align-content: center;
-  background: var(--accentSec);
-  border-radius: 3px;
-  padding: 5px 0;
-  align-self: center;
-  color: var(--textColorAccent);
-  cursor: pointer;
+	width: 80px;
+	text-align: center;
+	height: fit-content;
+	align-content: center;
+	background: var(--accentSec);
+	border-radius: 3px;
+	padding: 5px 0;
+	align-self: center;
+	color: var(--textColorAccent);
+	cursor: pointer;
 }
 
 /*REEL*/
 
 .reel_ig {
-  margin: auto;
-  background: var(--neutralDark);
-  border-radius: 5px;
-  color: var(--textColor);
-  width: 410px;
-  height: 680px;
-  overflow: hidden;
+	margin: auto;
+	background: var(--neutralDark);
+	border-radius: 5px;
+	color: var(--textColor);
+	width: 410px;
+	height: 680px;
+	overflow: hidden;
 }
 
 .reel_img {
-  width: 100%;
-  height: 613px;
-  border-radius: 5px;
-  background-size: auto 100%;
+	width: 100%;
+	height: 613px;
+	border-radius: 5px;
+	background-size: auto 100%;
 }
 
 .reel_timeline {
-  padding: 20px 10px;
-  display: flex;
+	padding: 20px 10px;
+	display: flex;
 }
 
 .reel_timeline div {
-  height: 3px;
-  width: 100%;
-  background: #e6d7cf8c;
-  margin: 0 3px;
-  border-radius: 5px;
-  &.reel_actif {
+	height: 3px;
+	width: 100%;
+	background: #e6d7cf8c;
+	margin: 0 3px;
+	border-radius: 5px;
+	&.reel_actif {
 	background: #e6d7cf;
-  }
+	}
 }
 
 .reel_desc {
-  display: flex;
-  margin: 0 25px;
+	display: flex;
+	margin: 0 25px;
 
-  img {
+	img {
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
-  }
+	}
 
-  .reel_handle {
+	.reel_handle {
 	width: 305px;
 	align-content: center;
 	padding: 0 15px;
@@ -841,19 +850,19 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 	i {
 		font-size: 15px;
 	}
-  }
+	}
 
-  i {
+	i {
 	font-size: 30px;
 	align-self: center;
 	color : #e6d7cf;
-  }
+	}
 }
 
 .reel_com {
-  display: flex;
+	display: flex;
 
-  div {
+	div {
 	width: 75%;
 	border: 1px solid var(--neutralDarker);
 	border-radius: 10px;
@@ -861,31 +870,31 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 	font-size: 16px;
 	font-family: 'Open sans', sans-serif;
 	margin: 10px;
-  }
+	}
 
-  i {
+	i {
 	font-size: 25px;
 	align-self: center;
 	margin: 0 7px;
-  }
+	}
 
 }
 
 .reel_handle {
-  font-size: 16px;
-  color: #e6d7cf;
-  .reel_pseudo {
-	font-weight: 700;
-  }
-  .reel_artist {
-	font-weight: 600;
-  }
-  .reel_time {
-	color: #e6d7cf8c;
-  }
-  i {
 	font-size: 16px;
-  }
+	color: #e6d7cf;
+	.reel_pseudo {
+	font-weight: 700;
+	}
+	.reel_artist {
+	font-weight: 600;
+	}
+	.reel_time {
+	color: #e6d7cf8c;
+	}
+	i {
+	font-size: 16px;
+	}
 } 
 
 /* ============= PART VII : SMS  ============= */ 
@@ -918,8 +927,8 @@ smsa img:not([src*="/smiles/"]), smsb img:not([src*="/smiles/"]), smsc img:not([
 }
 
 smsa:has(img:not([src*="/smiles/"])), smsb:has(img:not([src*="/smiles/"])), smsc:has(img:not([src*="/smiles/"])) {
-  padding: 0;
-  overflow: hidden;
+	padding: 0;
+	overflow: hidden;
 
 }
 
@@ -941,46 +950,46 @@ smsa, smsb, smsc {
 		line-height: 0;
 		margin: 0 10px 0 0;
 		position: relative;
-   		bottom: -2px;
-   		font-size: 15px;
-   		text-align: left;
+			bottom: -2px;
+			font-size: 15px;
+			text-align: left;
 	}
 
 	&.quote {
-	  padding: 10px 20px 10px 50px;
-	  font-style: italic;
-	  opacity: 0.75;
+		padding: 10px 20px 10px 50px;
+		font-style: italic;
+		opacity: 0.75;
 	}
 
 	&.quote::before {
-	  content: ' ';
-	  height: calc(100% - 20px);
-	  background-color: var(--textColor);
-	  width: 1px;
-	  display: block;
-	  position: absolute;
-	  margin: 0 0 0 -7px;
+		content: ' ';
+		height: calc(100% - 20px);
+		background-color: var(--textColor);
+		width: 1px;
+		display: block;
+		position: absolute;
+		margin: 0 0 0 -7px;
 
 	}
 
 	&:has(img:not([src^="/users/"])).like::after {
-	  	bottom: 6px!important;
+			bottom: 6px!important;
 	}
 
 	&.like {
- 		margin: 5px 0 20px 0;
+		margin: 5px 0 20px 0;
 	}
 
 	&.like::after {
-	  content: "\F59D";
-	  position: absolute;
-	  color: #b30000;
-	  padding: 5px 7px;
-	  border-radius: 20px;
-	  font-family: "bootstrap-icons";
-	  bottom: -18px;
-	  font-size: 11px;
-	  right: 13px;
+		content: "\F59D";
+		position: absolute;
+		color: #b30000;
+		padding: 5px 7px;
+		border-radius: 20px;
+		font-family: "bootstrap-icons";
+		bottom: -18px;
+		font-size: 11px;
+		right: 13px;
 	}
 
 	
@@ -1014,58 +1023,58 @@ time {
  */
 
 dots {
-  position: relative;
-  width: 7px;
-  height: 7px;
-  border-radius: 5px;
-  animation: dot-flashing 1s infinite linear alternate;
-  animation-delay: 0.5s;
-  display: inline-block;
-  margin: 0 15px;
+	position: relative;
+	width: 7px;
+	height: 7px;
+	border-radius: 5px;
+	animation: dot-flashing 1s infinite linear alternate;
+	animation-delay: 0.5s;
+	display: inline-block;
+	margin: 0 15px;
 }
 
 smsa dots, smsb dots, smsc dots {
 	background-color: var(--textColor);
-  	color: var(--textColor);
-  	margin: 4px 5px;
-  	display: block;
+		color: var(--textColor);
+		margin: 4px 5px;
+		display: block;
 }
 
 
 dots::before, dots::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 0;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 0;
 }
 dots::before {
-  left: -10px;
-  width: 7px;
-  height: 7px;
-  border-radius: 5px;
-  background-color: var(--textColor);
-  color: var(--textColor);
-  animation: dot-flashing 1s infinite alternate;
-  animation-delay: 0s;
+	left: -10px;
+	width: 7px;
+	height: 7px;
+	border-radius: 5px;
+	background-color: var(--textColor);
+	color: var(--textColor);
+	animation: dot-flashing 1s infinite alternate;
+	animation-delay: 0s;
 }
 dots::after {
-  left: 10px;
-  width: 7px;
-  height: 7px;
-  border-radius: 5px;
-  background-color: var(--textColor);
-  color: var(--textColor);
-  animation: dot-flashing 1s infinite alternate;
-  animation-delay: 1s;
+	left: 10px;
+	width: 7px;
+	height: 7px;
+	border-radius: 5px;
+	background-color: var(--textColor);
+	color: var(--textColor);
+	animation: dot-flashing 1s infinite alternate;
+	animation-delay: 1s;
 }
 
 @keyframes dot-flashing {
-  0% {
-    background-color: var(--textColor);
-  }
-  50%, 100% {
-    background-color: rgba(152, 152, 152, 0.2);
-  }
+	0% {
+		background-color: var(--textColor);
+	}
+	50%, 100% {
+		background-color: rgba(152, 152, 152, 0.2);
+	}
 }
 
 /*# sourceMappingURL=three-dots.css.map */
@@ -1181,7 +1190,7 @@ txt:before {
 	width: -webkit-fill-available;
 	height: 260px;
 	display: flex;
-  flex-direction: column;
+	flex-direction: column;
 }
 
 .prez_img {
@@ -1220,7 +1229,7 @@ txt:before {
 	align-items: center;
 	margin: 0 0 10px 0;
 	border-bottom: solid 1px var(--accentClr);
-  	background-color: var(--neutralDark);
+		background-color: var(--neutralDark);
 
 	.prez_pronoms {
 		font-family: var(--font-accent);
@@ -1232,14 +1241,14 @@ txt:before {
 	}
 
 	.prez_espece {
-	  background: var(--neutralDark);
-	  padding: 5px 10px;
-	  font-family: var(--font-accent);
-	  font-size: var(--normal-size);
-	  border-radius: 3px;
-	  margin: 2px 0 0 0;
+		background: var(--neutralDark);
+		padding: 5px 10px;
+		font-family: var(--font-accent);
+		font-size: var(--normal-size);
+		border-radius: 3px;
+		margin: 2px 0 0 0;
 
-		  &.harpies { background:var(--harpies); color: var(--neutral);}
+			&.harpies { background:var(--harpies); color: var(--neutral);}
 			&.dryades { background:var(--dryades); color: var(--neutral);}
 			&.sirenes { background:var(--sirenes); color: var(--neutral);}
 
@@ -1260,40 +1269,40 @@ txt:before {
 }
 
 .prez_quote {
-  background: var(--neutral);
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px 10px 0 0;
-  height: max-content;
-  font-family: var(--font-accent);
+	background: var(--neutral);
+	padding: 10px;
+	border-radius: 5px;
+	margin: 10px 10px 0 0;
+	height: max-content;
+	font-family: var(--font-accent);
 }
 
 .prez_libre_specie, .prez_libre_human {
-  background: var(--neutralDark);
-  margin: 20px 0 0 0;
-  padding: 20px 60px;
-  border-radius: 5px;
-  
-  img {
+	background: var(--neutralDark);
+	margin: 20px 0 0 0;
+	padding: 20px 60px;
+	border-radius: 5px;
+	
+	img {
 		max-width: 470px;
 		border-radius: 3px;
 	}
 
-  &:empty {
+	&:empty {
 	display: none;
-  }
+	}
 }
 
 .prez_tw, .prez_credits {
-  background: var(--neutralDark);
-  padding: 10px;
-  margin: 0 50px;
-  border-radius: 3px;
+	background: var(--neutralDark);
+	padding: 10px;
+	margin: 0 50px;
+	border-radius: 3px;
 }
 
 .prez_credits {
-  text-align: right;
-  font-family: var(--font-accent);
+	text-align: right;
+	font-family: var(--font-accent);
 }
 
 /* === CHRONOLOGIE === */
@@ -1373,14 +1382,14 @@ txt:before {
 /* GESTION  */
 
 .gestion_main {
-  background: var(--neutralDark);
-  border-radius: 10px;
-  padding: 20px 25px;
+	background: var(--neutralDark);
+	border-radius: 10px;
+	padding: 20px 25px;
 
-  details {
-	  background: var(--neutral);
-	  padding: 10px 30px 30px 30px;
-	  border-radius: 10px;
+	details {
+		background: var(--neutral);
+		padding: 10px 30px 30px 30px;
+		border-radius: 10px;
 	}
 
 	summary {
@@ -1391,27 +1400,27 @@ txt:before {
 }
 
 .gestion_content {
-  padding: 10px;
-  border-radius: 10px;
-  background: var(--neutral);
-  tp1 {
-	  margin: 0 25px;
+	padding: 10px;
+	border-radius: 10px;
+	background: var(--neutral);
+	tp1 {
+		margin: 0 25px;
 	}
 }
 
 .gestion_title {
-  font-size: 30px;
-  font-family: var(--font-var);
-  text-align: right;
-  margin: 0 30px 0 0;
+	font-size: 30px;
+	font-family: var(--font-var);
+	text-align: right;
+	margin: 0 30px 0 0;
 } 
 
 /* ============= PART X : Générateurs ============= */
 
 .container.bottinGenerator {
 	position: relative;
-    margin: 60px 0 40px 0;
-    padding: 4px 5px;
+		margin: 60px 0 40px 0;
+		padding: 4px 5px;
 
 	.button {
 		margin: 0 auto;
@@ -1473,26 +1482,26 @@ txt:before {
 /* ============= PART XII : DEBUG ============= */ 
 
 .profil_editavatar dl:first-child {
-  display: grid!important;
-  grid-template-columns: 415px auto;
-  dd {
-    max-height: max-content; 
-  }
+	display: grid!important;
+	grid-template-columns: 415px auto;
+	dd {
+		max-height: max-content; 
+	}
 }
 #dateRP { 
-  margin: -10px 0 20px 0;
-  padding: 10px 25px;
-  font-family: var(--font-accent);
-  font-size: 15px; }
+	margin: -10px 0 20px 0;
+	padding: 10px 25px;
+	font-family: var(--font-accent);
+	font-size: 15px; }
 #FAM { height: calc(100% - 63px); }
 .sceditor-mention-user {
-  padding: 3px!important;
-  height: 30px!important;
-  margin: 0 0 3px 0!important;
-  background-color: var(--neutralDark)!important;
-  border: none!important; 
-  img { border: none!important; }
-  &:hover { color: var(--accentClrDar); } 
+	padding: 3px!important;
+	height: 30px!important;
+	margin: 0 0 3px 0!important;
+	background-color: var(--neutralDark)!important;
+	border: none!important; 
+	img { border: none!important; }
+	&:hover { color: var(--accentClrDar); } 
 }
 
 
@@ -1500,9 +1509,9 @@ txt:before {
 
 /* Chrome only: */
 @-moz-document url-prefix() { 
-  .insta_fil {
-    div {
-        width: 150px;
-        height: 150px; }
-    }
+	.insta_fil {
+		div {
+				width: 150px;
+				height: 150px; }
+		}
 }
