@@ -21,7 +21,7 @@
     {
       "id": "background",
       "type": "background",
-      "paint": {"background-color": "rgba(14, 13, 12, 1)"}
+      "paint": {"background-color": "rgba(14, 13, 11, 1)"}
     },
     {
       "id": "water",
@@ -33,7 +33,7 @@
         ["match", ["geometry-type"], ["MultiPolygon", "Polygon"], true, false],
         ["!=", ["get", "brunnel"], "tunnel"]
       ],
-      "paint": {"fill-antialias": false, "fill-color": "rgba(29, 28, 27, 1)"}
+      "paint": {"fill-antialias": false, "fill-color": "rgba(28, 26, 24, 1)"}
     },
     {
       "id": "landcover_ice_shelf",
