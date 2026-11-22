@@ -177,7 +177,7 @@
       ],
       "paint": {
         "fill-antialias": true,
-        "fill-color": "rgb(10,10,10)",
+        "fill-color": "rgba(12, 11, 10, 1)",
         "fill-outline-color": "rgb(27 ,27 ,29)"
       }
     },
