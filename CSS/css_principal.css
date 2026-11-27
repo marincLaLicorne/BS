@@ -1294,7 +1294,7 @@ a.forumtitle { /* On rends le lien esthétiquement plaisant */
 		content: '•';
 		color: var(--accentSecDark);
 		display: inline-block;
-		margin: 0 5px 0 5xp;
+		margin: 0 5px 0 5px;
 	}
 
 	.forum_author {
