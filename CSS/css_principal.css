@@ -2238,6 +2238,7 @@ a.forumtitle { /* On rends le lien esthétiquement plaisant */
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		z-index: 50;
 }
 
 .icone.online { /* Icone de connexion */
@@ -2447,7 +2448,6 @@ a.forumtitle { /* On rends le lien esthétiquement plaisant */
 	width: 100%;
 	margin: auto;
 	color: var(--textColorAccent);
-	display: none;
 	position: relative;
 	text-align: center;
 }
