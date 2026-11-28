@@ -436,6 +436,7 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 	&.harpies a { color: var(--harpies);}
 	&.dryades a { color: var(--dryades);}
 	&.sirenes a { color: var(--sirenes);}
+	&.wazaghs a { color: var(--wazaghs);}
 
 	&.lycans a { color: var(--lycans);}
 	&.stryges a { color: var(--stryges);}
@@ -519,6 +520,7 @@ liste a:hover { /* A DEBUG AVEC LE DEGRADE ICI */
 		&.harpies { color:var(--harpies);}
 		&.dryades { color:var(--dryades);}
 		&.sirenes { color:var(--sirenes);}
+		&.wazaghs { color: var(--wazaghs);}
 
 		&.lycans { color:var(--lycans);}
 		&.stryges { color:var(--stryges);}
@@ -1251,6 +1253,7 @@ txt:before {
 			&.harpies { background:var(--harpies); color: var(--neutral);}
 			&.dryades { background:var(--dryades); color: var(--neutral);}
 			&.sirenes { background:var(--sirenes); color: var(--neutral);}
+			&.wazaghs { background:var(--wazaghs); color: var(--neutral);}
 
 			&.lycans { background:var(--lycans); color: var(--neutral);}
 			&.stryges { background:var(--stryges); color: var(--neutral);}
@@ -1335,6 +1338,7 @@ txt:before {
 		&.harpies { color:var(--harpies);}
 		&.dryades { color:var(--dryades);}
 		&.sirenes { color:var(--sirenes);}
+		&.wazaghs { color:var(--wazaghs);}
 
 		&.lycans { color:var(--lycans);}
 		&.stryges { color:var(--stryges);}
